@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to PIK6</title>
+	<meta http-equiv="expires" content="0">
+	<script src="../../lib/mootools.js"></script>
+	<script src="../../lib/presentation.js"></script>
+	<link href="../../lib/presentation.css" rel="stylesheet">
+	<link href="../../styles/Default/style.css" rel="stylesheet">
+	<base target="_blank">
+</head>
+<body>
+<div id="hide"></div>
+<div id="Pik6-presentation-container">
+
+
+<div class="pik6-slide" id="Start">
+<h1>PIK6</h1>
+<h2>HTML5 presentation framework</h2>
+</div>
+
+<div class="pik6-slide">
+<h2>Features</h2>
+<ul>
+<li>100% HTML5, CSS and JavaScript (MooTools)
+<li>Multiple presentation views and presenter mode
+<li>Programmable slides
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>Controls</h2>
+<ul>
+<li>Use the left and right arrow keys to navigate through the slides
+<li>Move your Mouse to the bottom of the presentation view to reveal more controls
+<li>The presenter view offers a drop down menu for all slides in the presentation
+<li>The F5 and ESC keys hide the presentation
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>Why?</h2>
+<ul>
+<li>Hackable, scriptable presentations
+<li>Easy embedding of web pages, media, youtube videos …
+<li>Great performance in modern browsers even with hundreds of slides
+<li>Presenter mode
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>Why not?</h2>
+<ul>
+<li>Only works in modern browsers
+<li>Requires a web server
+<li>a
+<li>a
+<li>No PDF export
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>How to build presentations</h2>
+<ul>
+<li>A
+<li>B
+<li>C
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>How to use the presenter mode</h2>
+<ul>
+<li>A
+<li>B
+<li>C
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>Programming presentations</h2>
+<ul>
+<li>An <code>activate</code> event is fired on the slides when they are shown
+<li>A <code>deactivate</code> event when hidden
+<li>A <code>change</code> event is fired on the <code>document</code> object when slides change
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>Simple programming example</h2>
+<pre class="prettyprint">window.addEvent('domready', function(){
+    $('demoslide').addEvents({
+        'activate': function(){
+            this.getElements('h2').set('morph', {
+                duration: 1000
+            }).morph({
+                'color': ['#FFF', '#AE1215'],
+                'font-size': ['50%', '100%']
+            });
+        }
+    });
+});</pre>
+</div>
+
+<div class="pik6-slide center" id="demoslide">
+	<div class="center">
+		<h2>Hello Demo!</h2>
+	</div>
+</div>
+<script>
+window.addEvent('domready', function(){
+    $('demoslide').addEvents({
+        'activate': function(){
+            this.getElements('h2').set('morph', {
+                duration: 1000
+            }).morph({
+                'color': ['#FFF', '#AE1215'],
+                'font-size': ['50%', '100%']
+            });
+        }
+    });
+});</script>
+
+<div class="pik6-slide">
+<h2>Scripting without scripts</h2>
+<ul>
+<li>The presentation is just an iframe with a url containing a hash
+<li>The slide with the id that matches the hash is made visible using the <code>:target</code> selector from CSS3
+<li>This principle allows you to trigger actions without using JavaScript and create slide transitions!
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>Simple CSS "scripting" example</h2>
+<pre class="prettyprint">h2#special {
+    color: #FFF;
+    font-size: 50%;
+}
+:target h2#special {
+    transition: all 1s;
+    color: #AE1215;
+    font-size: 100%;
+}</pre>
+</div>
+
+<div class="pik6-slide center">
+	<div class="center">
+		<h2 id="special">Hello Demo!</h2>
+	</div>
+</div>
+
+<div class="pik6-slide">
+<h2>Slide transition example</h2>
+<pre class="prettyprint">.transition {
+    transform: translate(-100%, 0%);
+}
+.transition:target {
+    transition: transform 1s;
+    transform: translate(0%, 0%);
+}</pre>
+</div>
+
+<div class="pik6-slide transition">
+	<h2>Hello slide transition!</h2>
+	<ul>
+		<li>Lorem
+		<li>Ipsum
+		<li>Dolor
+	</ul>
+</div>
+
+
+</div>
+</body>
+</html>

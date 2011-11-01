@@ -1,0 +1,27 @@
+html, body, #Pik6-presentation-container {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.pik6-slide, #hide {
+	box-sizing: border-box;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.pik6-slide:target, #hide:target {
+	visibility: visible;
+}
+#hide {
+	background: #000;
+	z-index: 1337;
+}
+#Pik6-presentation-container {
+	position: relative;
+	margin: 0 auto;
+}
