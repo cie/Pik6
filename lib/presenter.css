@@ -1,0 +1,12 @@
+iframe {
+	border: 1px solid black;
+	display: inline-block;
+}
+#Pik6-frame {
+	width: 640px;
+	height: 480px;
+}
+#Pik6-frame-preview {
+	width: 640px;
+	height: 480px;
+}

@@ -6,6 +6,17 @@
 	<script src="lib/mootools.js"></script>
 	<script src="lib/hashchange.js"></script>
 	<script src="lib/frame.js"></script>
+	<script>
+		/* Initialize */
+		window.addEvent('domready', function(){
+			var iframes = $$('#Pik6-frame');
+			iframes.addEvent('load', function(){
+				if(this.contentWindow.Pik6){
+					init(iframes);
+				}
+			});
+		});
+	</script>
 	<link href="lib/frame.css" rel="stylesheet">
 	<base target="_blank">
 </head>
