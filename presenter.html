@@ -7,11 +7,26 @@
 	<script src="lib/hashchange.js"></script>
 	<script src="lib/frame.js"></script>
 	<script src="lib/presenter.js"></script>
+	<script>
+		/* Initialize. A bit more complicated because there's two iframes... */
+		window.addEvent('domready', function(){
+			"use strict";
+			var loaded  = 0,
+			    iframes = $$('iframe');
+			iframes.addEvent('load', function(){
+				loaded++;
+				if(loaded === iframes.length){
+					init(iframes);
+					loaded = 0;
+				}
+			});
+		});
+	</script>
 	<link href="lib/presenter.css" rel="stylesheet">
 </head>
 <body>
-	<iframe id="Pik6-frame" name="Mainframe" src=""></iframe>
-	<iframe id="Pik6-frame-preview" src=""></iframe>
+	<iframe id="Pik6-frame" name="Mainframe" src="lib/start.html"></iframe>
+	<iframe id="Pik6-frame-preview" src="lib/start.html"></iframe>
 	<div id="Pik6-framecontrols">
 		<div>
 			<span id="Pik6-framecontrols-slidecount">0 / 0</span>

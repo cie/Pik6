@@ -9,6 +9,7 @@
 	<script>
 		/* Initialize */
 		window.addEvent('domready', function(){
+			"use strict";
 			var iframes = $$('#Pik6-frame');
 			iframes.addEvent('load', function(){
 				if(this.contentWindow.Pik6){
@@ -21,7 +22,7 @@
 	<base target="_blank">
 </head>
 <body>
-	<iframe id="Pik6-frame" name="Mainframe" src="presentations/Pik6/index.html"></iframe>
+	<iframe id="Pik6-frame" name="Mainframe" src="lib/start.html"></iframe>
 	<div id="Pik6-framecontrols">
 		<div>
 			<span id="Pik6-framecontrols-slidecount">0 / 0</span>
