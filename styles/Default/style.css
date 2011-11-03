@@ -34,6 +34,19 @@ pre {
 	overflow: hidden;
 	line-height: 1.4;
 }
+a, a:link, a:visited {
+	cursor: pointer;
+	color: #AE1215;
+	text-decoration: none;
+	border-bottom: 0.1em solid #AE1215;
+}
+a:visited {
+	border-bottom: 0.1em dotted #AE1215;
+}
+a:hover, a:active {
+	color: #000;
+	border-bottom: 0.1em solid transparent;
+}
 
 /* Wrap two .center elements to center their children
    horizontally and vertically */
