@@ -1,5 +1,7 @@
 html, body {
 	overflow: hidden;
+	font-size: 15px;
+	font-family: Arial, sans-serif;
 }
 html, body, iframe {
 	display: block;
@@ -9,8 +11,6 @@ html, body, iframe {
 	margin: 0;
 	padding: 0;
 }
-
-/* Main presentation contols */
 #Pik6-framecontrols {
 	text-align: center;
 	z-index: 1337;
@@ -20,8 +20,6 @@ html, body, iframe {
 	right: 0;
 }
 #Pik6-framecontrols div {
-	font-size: 14px;
-	font-family: Arial, sans-serif;
 	cursor: pointer;
 	display: inline-block;
 	position:relative;

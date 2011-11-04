@@ -9,12 +9,13 @@
 	<script>
 		"use strict";
 		window.addEvent('domready', function(){
-			var iframes = $$('#Pik6-frame');
+			var iframes = $$('iframe');
 			iframes.addEvent('load', function(){
 				init(iframes);
 			});
 		});
 	</script>
+	<link href="lib/ui.css" rel="stylesheet">
 	<link href="lib/frame.css" rel="stylesheet">
 </head>
 <body>
