@@ -7,6 +7,7 @@
 	<script src="../../lib/mootools.js"></script>             <!-- Important - do not remove! -->
 	<script src="../../lib/presentation.js"></script>         <!-- Important - do not remove! -->
 	<link href="../../lib/presentation.css" rel="stylesheet"> <!-- Important - do not remove! -->
+	<link href="../../lib/transitions.css" rel="stylesheet">
 	<link href="../../styles/Default/style.css" rel="stylesheet">
 	<base target="_blank">
 	<script src="assets/google-code-prettify/prettify.js"></script>
@@ -24,27 +25,6 @@
 			transition: all 1s;
 			color: #AE1215;
 			font-size: 300%;
-		}
-
-		/* Demo II */
-		.transition {
-			-moz-transform: translate(-100%, 0%);
-			-webkit-transform: translate(-100%, 0%);
-			-ms-transform: translate(-100%, 0%);
-			-o-transform: translate(-100%, 0%);
-			transform: translate(-100%, 0%);
-		}
-		.transition:target {
-			-moz-transition: -moz-transform 1s;
-			-webkit-transition: -webkit-transform 1s;
-			-ms-transition: -ms-transform 1s;
-			-o-transition: -o-transform 1s;
-			transition: transform 1s;
-			-moz-transform: translate(0%, 0%);
-			-webkit-transform: translate(0%, 0%);
-			-ms-transform: translate(0%, 0%);
-			-o-transform: translate(0%, 0%);
-			transform: translate(0%, 0%);
 		}
 	</style>
 </head>
@@ -86,8 +66,6 @@
 <ul>
 <li>Only works in modern browsers
 <li>Requires a web server
-<li>a
-<li>a
 <li>No PDF export
 </ul>
 </div>
@@ -99,6 +77,16 @@
 <li>Move your Mouse to the bottom of the presentation view to reveal more controls
 <li>The presenter view offers a drop down menu for all slides in the presentation
 <li>The F5 and ESC keys hide the presentation
+</ul>
+</div>
+
+<div class="pik6-slide">
+<h2>Additional keyboard shortcuts</h2>
+<ul>
+<li>Accesskey + <key>r</key>: Reload presentation
+<li>Accesskey + <key>b</key>: Browser presentations
+<li>Accesskey + <key>o</key>: "Open URL" dialoge
+<li>Accesskey + <key>p</key>: Open presenter view
 </ul>
 </div>
 
@@ -119,11 +107,11 @@
 </div>
 
 <div class="pik6-slide">
-<h2>Using the presenter mode</h2>
+<h2>Presenter mode</h2>
 <ul>
-<li>A
-<li>B
-<li>C
+<li>Open <code>presenter.html</code> in a new window to use the presenter mode.
+<li>The presenter mode offers more control elements, shows a timer and lets you see the currently displayed slide and which slide comes next
+<li>Currently requires Chrome 8 or newer.
 </ul>
 </div>
 
@@ -139,34 +127,28 @@
 <div class="pik6-slide">
 <h2>Simple programming example</h2>
 <pre class="prettyprint">window.addEvent('domready', function(){
-    $('demoslide').addEvents({
+    $('Demo').addEvents({
         'activate': function(){
-            this.getElements('h2').set('morph', {
-                duration: 1000
-            }).morph({
-                'color': ['#FFF', '#AE1215'],
-                'font-size': ['50%', '100%']
-            });
+            this.getFirst().set('html', something);
+        },
+        'deactivate': function(){
+            this.getFirst().set('html', '');
         }
     });
 });</pre>
 </div>
 
-<div class="pik6-slide center" id="demoslide">
-	<div class="center">
-		<h2>Hello Demo!</h2>
-	</div>
+<div class="pik6-slide center" id="Demo">
+	<div class="center"></div>
 </div>
 <script>
 window.addEvent('domready', function(){
-    $('demoslide').addEvents({
+    $('Demo').addEvents({
         'activate': function(){
-            this.getElements('h2').set('morph', {
-                duration: 1000
-            }).morph({
-                'color': ['#FFF', '#AE1215'],
-                'font-size': ['50%', '100%']
-            });
+            this.getFirst().set('html', '<iframe width="640" height="480" src="http://www.youtube.com/embed/Y1g2Cx03L2I?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        },
+        'deactivate': function(){
+            this.getFirst().set('html', '');
         }
     });
 });</script>
@@ -176,7 +158,7 @@ window.addEvent('domready', function(){
 <ul>
 <li>The presentation is just an iframe with a url containing a hash
 <li>The slide with the id that matches the hash is made visible using the <code>:target</code> selector from CSS3
-<li>This principle allows you to trigger actions without using JavaScript and create slide transitions!
+<li>This allows you to trigger visual effects without using JavaScript
 </ul>
 </div>
 
@@ -199,26 +181,34 @@ window.addEvent('domready', function(){
 	</div>
 </div>
 
+<div class="pik6-slide pik6-transition-slide-in-left">
+<h2>Slide transitions</h2>
+<ul>
+<li>Use <code>lib/transitions.css</code> in your presentation to enable slide transitions
+<li>Add a transition class to your slides to use a transition for this slide
+<li>Example: <code class="prettyprint language-html">&lt;div class="pik6-slide pik6-transition-fade"&gt;</code>
+</ul>
+</div>
+
+<div class="pik6-slide pik6-transition-fade">
+<h2>Transition classes</h2>
+<ul>
+	<li><code>pik6-transition-slide-in-left</code>: slide in from the left
+	<li><code>pik6-transition-slide-in-right</code>: slide in from the right
+	<li><code>pik6-transition-slide-in-top</code>: slide in from the top
+	<li><code>pik6-transition-slide-in-bottom</code>: slide in from the bottom
+	<li><code>pik6-transition-fade</code>: fade in and out
+</ul>
+</div>
+
 <div class="pik6-slide">
-<h2>Slide transition example</h2>
-<pre class="prettyprint">.transition {
-    transform: translate(-100%, 0%);
-}
-.transition:target {
-    transition: transform 1s;
-    transform: translate(0%, 0%);
-}</pre>
+<h2>Links</h2>
+<ul>
+	<li><a href="https://github.com/SirPepe/Pik6">Github</a>
+	<li><a href="http://pik6.peterkroener.de/">Web site</a>
+	<li><a href="mailto:peter@peterkroener.de">Contact me!</code>
+</ul>
 </div>
-
-<div class="pik6-slide transition">
-	<h2>Hello slide transition!</h2>
-	<ul>
-		<li>Lorem
-		<li>Ipsum
-		<li>Dolor
-	</ul>
-</div>
-
 
 </div> <!-- End #Pik6-presentation-container -->
 </body>
