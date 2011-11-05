@@ -73,12 +73,18 @@ iframe:hover {
 }
 
 
-#Pik6-framecontrols {
-	text-align: center;
+#Pik6-slideselect {
+	font-size: inherit;
+	width: 304px;
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	top: 432px;
+	right: 0;
+}
+
+#Pik6-framecontrols {
+	text-align: right;
+	position: absolute;
+	top: 480px;
 	right: 0;
 	margin: 0;
-	padding: 16px 32px;
 }

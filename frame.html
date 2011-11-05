@@ -11,7 +11,7 @@
 		window.addEvent('domready', function(){
 			var iframes = $$('iframe');
 			iframes.addEvent('load', function(){
-				init(iframes);
+				Pik6.init(iframes);
 			});
 		});
 	</script>
@@ -26,11 +26,11 @@
 			|
 			<a accesskey="r" id="Pik6-reload-presentation" title="Reload the current presentation">Reload</a>
 			|
-			<a accesskey="b" href="presentations" target="Mainframe" title="Browse the presentations directory">Browse</a>
+			<a accesskey="b" id="Pik6-browse" href="presentations" target="Mainframe" title="Browse the presentations directory">Browse</a>
 			|
 			<a accesskey="o" id="Pik6-open-presentation" title="Load a presentation via url">Open</a>
 			|
-			<a accesskey="p" href="presenter.html" title="Launch the presentater view">Presenter</a>
+			<a accesskey="p" target="_blank" href="presenter.html" title="Launch the presentater view">Presenter</a>
 		</div>
 	</div>
 </body>

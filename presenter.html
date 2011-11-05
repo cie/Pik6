@@ -15,7 +15,7 @@
 			iframes.addEvent('load', function(){
 				loaded++;
 				if(loaded === iframes.length){
-					init(iframes);
+					Pik6.init(iframes);
 					loaded = 0;
 				}
 			});
@@ -31,16 +31,13 @@
 		</div>
 		<iframe id="Pik6-frame" id="Mainframe" name="Mainframe" src="lib/start.html"></iframe>
 		<iframe id="Pik6-frame-preview" src="lib/start.html"></iframe>
-	</div>
-	<div id="Pik6-framecontrols">
-		<div>
+		<select id="Pik6-slideselect"></select>
+		<div id="Pik6-framecontrols">
 			<a accesskey="r" id="Pik6-reload-presentation" title="Reload the current presentation">Reload</a>
 			|
-			<a href="presentations" target="Mainframe" title="Browse the presentations directory">Browse</a>
+			<a accesskey="b" id="Pik6-browse" href="presentations" target="Mainframe" title="Browse the presentations directory">Browse</a>
 			|
-			<a id="Pik6-open-presentation" title="Load a presentation via url">Open</a>
-			|
-			<a href="presenter.html" title="Launch the presentater view">Presenter</a>
+			<a accesskey="o" id="Pik6-open-presentation" title="Load a presentation via url">Open</a>
 		</div>
 	</div>
 </body>
