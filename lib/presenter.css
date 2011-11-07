@@ -27,7 +27,7 @@ a:hover, a:active {
 
 iframe {
 	background: #FFF;
-	border: none;
+	border: 4px solid #FFF;
 	box-shadow: 0 0 64px -12px #000;
 	display: block;
 	z-index: 1;
@@ -75,7 +75,7 @@ iframe:hover {
 
 #Pik6-slideselect {
 	font-size: inherit;
-	width: 304px;
+	width: 296px;
 	position: absolute;
 	top: 432px;
 	right: 0;
