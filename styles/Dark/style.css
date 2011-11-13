@@ -17,6 +17,9 @@ h1, h2, p, ul, ol, p, pre, table, blockquote {
 	margin-left: 3.5%;
 	margin-right: 3.5%
 }
+blockquote + p.cite {
+	padding-left: 10%;
+}
 h1 {
 	font-size: 3.5em;
 	text-align: center;
@@ -37,11 +40,15 @@ h1 + h2 {
 	font-size: 1.5em;
 }
 pre {
+	font-size:0.75em;
 	text-align: left !important;
 	overflow: hidden;
 	line-height: 1.3;
 	margin-bottom: 2.25em;
 	padding: 0;
+}
+pre, code {
+	font-family: "DejaVu Sans Mono", monospace;
 }
 q, blockquote {
 	font-style: italic;
@@ -50,8 +57,10 @@ mark {
 	background: yellow;
 	color: #000 !important;
 }
+small {
+	font-size: 0.5em;
+}
 iframe {
-	display: block;
 	border: none;
 	width: 95%;
 	height: 65%;
@@ -71,8 +80,21 @@ a {
 a:hover, a:active {
 	border-bottom: 0.1em solid transparent;
 }
+.imagelink {
+	border: none;
+	background: none;
+}
 s {
 	text-decoration: line-through;
+}
+.shadow {
+	box-shadow: 0 0 16px #999;
+}
+input, button {
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: bold;
+	font-style: italic;
 }
 
 /* Tables */
@@ -97,14 +119,20 @@ td, th {
    horizontally and vertically */
 .center, .pik6-slide:first-child {
 	display: table;
+	border-collapse: collapse;
 	text-align: center;
 	width: 100%;
 	height: 100%;
 }
-.center .center, .pik6-slide:first-child h1 {
+.center > .center, .pik6-slide:first-child > h1 {
 	display: table-cell;
 	vertical-align: middle;
 }
+pre.center {
+	padding-left: 3.5%; padding-right: 3.5% /* Margin doesn't work with display: table-cell */
+}
+.left { text-align: left; }
+.right { text-align: right; }
 
 /* Completly fill a slide */
 .fill {
@@ -118,14 +146,14 @@ td, th {
 }
 
 /* Prettyprint code highlighting */
+.dec { color: #F0F; font-weight: bold; }
 .pln { color: #FFF; }
 .str { color: #0F0; }
-.kwd { color: #22F; font-weight: bold; }
+.kwd, .tag { color: #06F; font-weight: bold; }
 .com { color: #999; font-style: italic; }
-.typ { color: #404; font-weight: bold; }
+.typ { color: #FFF; font-weight: bold; }
 .lit { color: #0CC; }
 .pun, .opn, .clo { color: #CCC; }
-.tag { color: #06F; font-weight: bold; }
 .atn { color: #F0F; }
 .atv { color: #0F0; }
 
