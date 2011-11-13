@@ -6,7 +6,6 @@ html, body, #Pik6-presentation-container {
 	padding: 0;
 }
 .pik6-slide, #hide {
-	box-sizing: border-box;
 	visibility: hidden;
 	position: absolute;
 	top: 0;
