@@ -7,7 +7,7 @@ HTML5 presentation framework (MIT license)
 
 [http://github.com/SirPepe/Pik6][2]
 
-![Screenshot](screenshot.png)
+![Screenshot](https://github.com/SirPepe/Pik6/raw/master/screenshot.png)
 
 Features
 --------
