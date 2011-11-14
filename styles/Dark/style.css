@@ -1,3 +1,9 @@
+/*
+ * The style I use for most of my slides
+ * Includes styles for syntax highlighting using google-code-prettify
+*/
+
+
 body {
 	font-family: Georgia, "Times New Roman", serif;
 	line-height: 1.6;
@@ -10,7 +16,6 @@ body {
 .pik6-slide.white {
 	background: white;
 }
-
 
 /* Typography */
 h1, h2, p, ul, ol, p, pre, table, blockquote {
@@ -114,9 +119,6 @@ td, th {
 .colormap .maybe { background: yellow; }
 .colormap .no { background: red; }
 .colormap .na { background: #999; }
-
-
-
 
 /* Wrap two .center elements to center their children
    horizontally and vertically */

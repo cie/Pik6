@@ -1,3 +1,9 @@
+/*
+ * Default Pik6 theme
+ * Includes styles for syntax highlighting using google-code-prettify
+ */
+
+
 body {
 	font-family: Georgia, "Times New Roman", serif;
 	line-height: 1.6;
