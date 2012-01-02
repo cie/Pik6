@@ -10,7 +10,7 @@
 
 <p>Slide: <input type="number" id="slide"> <input type="button" id="slideSend" value="Send"> <input type="button" id="slidePrev" value="&laquo;"> <input type="button" id="slideNext" value="&raquo;">
 <p>File: <input type="text" id="file"> <input type="button" id="fileSend" value="Send">
-<p>Hidden: <input type="button" id="hideSend" value="Versteck-Toggle">
+<p>Hide: <input type="button" id="hideSend" value="Toggle"> Status: <span id="hide">Visible</span>
 
 <script>
 window.addEvent('pikSlide', function(now, prev){
@@ -35,5 +35,11 @@ $('fileSend').addEvent('click', function(){
 
 $('hideSend').addEvent('click', function(){
 	window.fireEvent('pikChangeHide');
+});
+window.addEvent('pikHide', function(now){
+	$('hide').set('text', 'Hidden');
+});
+window.addEvent('pikShow', function(now){
+	$('hide').set('text', 'Visible');
 });
 </script>
