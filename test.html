@@ -1,14 +1,15 @@
 <!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-	<script src="lib/mootools.js"></script>
-	<script src="lib/frame.js"></script>
-</head>
-<body>
-	<p>Slide: <input type="text" id="slide">
-	<p>File: <input type="text" id="slide">
-	<p>Hidden: <input type="text" id="slide">
-</body>
-</html>
+<meta charset="utf-8">
+<title></title>
+<script src="lib/mootools.js"></script>
+<script src="lib/frame.js"></script>
+
+<p>Slide: <input type="number" id="slide"> <input type="button" id="slideSend" value="Senden">
+<p>File: <input type="text" id="slide"> <input type="button" id="fileSend" value="Senden">
+<p>Hidden: <input type="number" min="0" max="1" value="0" id="slide"> <input type="button" id="hiddenSend" value="Senden">
+
+<script>
+window.addEvent('pikSlide', function(now, prev){
+	$('slide').set('value', now);
+});
+</script>
