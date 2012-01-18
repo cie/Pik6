@@ -1,0 +1,22 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/peter/public_html/OpenSource/Pik6"
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "Code documentation",
+			"cmd":
+			[
+				"docco",
+				"$project_path/lib/controls.js",
+				"$project_path/lib/frame.js",
+				"$project_path/lib/presentation.js",
+				"$project_path/lib/worker.js"
+			]
+		}
+	]
+}
