@@ -16,7 +16,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "",
+	"build_system": "Code documentation",
 	"command_palette":
 	{
 		"height": 375.0,
@@ -63,7 +63,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 435.0
+		"width": 588.0
 	},
 	"console":
 	{
@@ -80,6 +80,20 @@
 	},
 	"file_history":
 	[
+		"/home/peter/public_html/OpenSource/Pik6/lib/frame.js",
+		"/home/peter/public_html/OpenSource/Pik6/license",
+		"/home/peter/public_html/OpenSource/Pik6/lib/presentation.js",
+		"/home/peter/public_html/OpenSource/Pik6/lib/controls.js",
+		"/home/peter/public_html/OpenSource/Pik6/lib/worker.js",
+		"/home/peter/public_html/OpenSource/Pik6/Pik6.sublime-project",
+		"/home/peter/public_html/OpenSource/Pik6/lib/Event.hashchange.js",
+		"/home/peter/.config/sublime-text-2/Packages/User/Base File.sublime-settings",
+		"/home/peter/.config/sublime-text-2/Packages/SublimeLinter/Base File.sublime-settings",
+		"/home/peter/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
+		"/home/peter/.config/sublime-text-2/Packages/User/JavaScript.sublime-settings",
+		"/home/peter/.config/sublime-text-2/Packages/Default/Base File.sublime-settings",
+		"/home/peter/public_html/OpenSource/Pik6/lib/Pik6.sublime-workspace",
+		"/home/peter/public_html/OpenSource/Pik6/lib/Pik6.sublime-project",
 		"/home/peter/public_html/printtroll.html",
 		"/home/peter/.gvfs/SFTP als sirpepe auf sirpepe.fornax.uberspace.de/var/www/virtual/sirpepe/peterkroener.de/.htaccess",
 		"/tmp/sublime-sftp-browse-1326831480/peterkroener.de/var/www/virtual/sirpepe/assets/peterkroener.de/templates/screen.styl",
@@ -98,10 +112,7 @@
 		"/home/peter/Brainfire/public_html/OpenSource/Pik6/lib/frame.js",
 		"/home/peter/Brainfire/public_html/OpenSource/Pik6/lib/Pik6.sublime-project",
 		"/home/peter/.config/sublime-text-2/Packages/SideBarGit/SideBarGit.sublime-settings",
-		"/home/peter/.config/sublime-text-2/Packages/User/Base File.sublime-settings",
-		"/home/peter/.config/sublime-text-2/Packages/Default/Base File.sublime-settings",
 		"/home/peter/.config/sublime-text-2/Packages/Default/Global.sublime-settings",
-		"/home/peter/public_html/OpenSource/Pik6/lib/frame.js",
 		"/home/peter/public_html/OpenSource/Pik6/lib/test/test.html",
 		"/home/peter/.config/sublime-text-2/Packages/User/Global.sublime-settings",
 		"/home/peter/public_html/OpenSource/Pik6/lib/mootools.js",
@@ -133,6 +144,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rul",
 			"facepal",
 			"blockb",
 			"boxbg",
@@ -166,7 +178,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 42.0
 	},
 	"layout":
 	{
@@ -191,10 +203,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.sftp":
-	{
-		"height": 170.0
-	},
 	"replace":
 	{
 		"height": 0.0

@@ -15,7 +15,8 @@
 				"$project_path/lib/controls.js",
 				"$project_path/lib/frame.js",
 				"$project_path/lib/presentation.js",
-				"$project_path/lib/worker.js"
+				"$project_path/lib/worker.js",
+				"$project_path/lib/pik.js"
 			]
 		}
 	]
