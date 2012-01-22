@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"slid",
+				"slide_number"
+			],
+			[
+				"base",
+				"base_path"
+			],
+			[
+				"bas",
+				"base_path"
+			],
+			[
 				"bri",
 				"brightborder"
 			],
@@ -15,6 +27,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "frame.html",
+			"settings":
+			{
+				"buffer_size": 975,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/frame.js",
+			"settings":
+			{
+				"buffer_size": 10947,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/presentation.js",
+			"settings":
+			{
+				"buffer_size": 1733,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/frame.css",
+			"settings":
+			{
+				"buffer_size": 895,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Code documentation",
 	"command_palette":
@@ -80,12 +124,18 @@
 	},
 	"file_history":
 	[
-		"/home/peter/public_html/OpenSource/Pik6/lib/frame.js",
-		"/home/peter/public_html/OpenSource/Pik6/license",
 		"/home/peter/public_html/OpenSource/Pik6/lib/presentation.js",
-		"/home/peter/public_html/OpenSource/Pik6/lib/controls.js",
-		"/home/peter/public_html/OpenSource/Pik6/lib/worker.js",
+		"/home/peter/public_html/OpenSource/Pik6/lib/start.html",
+		"/home/peter/public_html/OpenSource/Pik6/lib/pik.js",
 		"/home/peter/public_html/OpenSource/Pik6/Pik6.sublime-project",
+		"/home/peter/public_html/OpenSource/Pik6/lib/frame.js",
+		"/home/peter/public_html/OpenSource/Pik6/lib/controls.js",
+		"/home/peter/public_html/OpenSource/Pik6/frame.html",
+		"/home/peter/public_html/OpenSource/Pik6/lib/pik6.js",
+		"/home/peter/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/peter/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/peter/public_html/OpenSource/Pik6/license",
+		"/home/peter/public_html/OpenSource/Pik6/lib/worker.js",
 		"/home/peter/public_html/OpenSource/Pik6/lib/Event.hashchange.js",
 		"/home/peter/.config/sublime-text-2/Packages/User/Base File.sublime-settings",
 		"/home/peter/.config/sublime-text-2/Packages/SublimeLinter/Base File.sublime-settings",
@@ -144,6 +194,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"updateState = ",
+			"updateState(",
+			"post",
 			"rul",
 			"facepal",
 			"blockb",
@@ -167,8 +220,117 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "frame.html",
+					"settings":
+					{
+						"buffer_size": 975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/frame.js",
+					"settings":
+					{
+						"buffer_size": 10947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5552,
+								5552
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/presentation.js",
+					"settings":
+					{
+						"buffer_size": 1733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								704,
+								704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/frame.css",
+					"settings":
+					{
+						"buffer_size": 895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -203,6 +365,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 164.0
+	},
 	"replace":
 	{
 		"height": 0.0
@@ -228,6 +394,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 187.0,
+	"side_bar_width": 300.0,
 	"status_bar_visible": true
 }
