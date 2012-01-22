@@ -1,3 +1,4 @@
+/* Page and container fill the whole available area */
 html, body, #Pik-presentation-container {
 	overflow: hidden;
 	width: 100%;
@@ -5,6 +6,14 @@ html, body, #Pik-presentation-container {
 	margin: 0;
 	padding: 0;
 }
+
+/* Allow positioning of child elements */
+#Pik-presentation-container {
+	position: relative;
+	margin: 0 auto;
+}
+
+/* Slides and hide overlay are invisible by default */
 .pik-slide, #hide {
 	visibility: hidden;
 	position: absolute;
@@ -13,14 +22,17 @@ html, body, #Pik-presentation-container {
 	height: 100%;
 	width: 100%;
 }
-.pik-slide.pik-current {
-	visibility: visible;
-}
+
+/* Hide overlay */
 #hide {
 	background: #000;
 	z-index: 1337;
 }
-#Pik-presentation-container {
-	position: relative;
-	margin: 0 auto;
+
+/* Special classes make slides and hide overlay visible */
+.pik-slide.pik-current {
+	visibility: visible;
+}
+#hide.pik-active {
+	visibility: visible;
 }
