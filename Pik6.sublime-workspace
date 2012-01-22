@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"local",
+				"local"
+			],
+			[
+				"ifra",
+				"iframes"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
 				"slid",
 				"slide_number"
 			],
@@ -28,34 +40,10 @@
 	"buffers":
 	[
 		{
-			"file": "frame.html",
+			"file": "presentations/Pik/index.html",
 			"settings":
 			{
-				"buffer_size": 975,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/frame.js",
-			"settings":
-			{
-				"buffer_size": 10947,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/presentation.js",
-			"settings":
-			{
-				"buffer_size": 1733,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/frame.css",
-			"settings":
-			{
-				"buffer_size": 895,
+				"buffer_size": 5578,
 				"line_ending": "Unix"
 			}
 		}
@@ -124,13 +112,18 @@
 	},
 	"file_history":
 	[
-		"/home/peter/public_html/OpenSource/Pik6/lib/presentation.js",
-		"/home/peter/public_html/OpenSource/Pik6/lib/start.html",
+		"/home/peter/public_html/OpenSource/Pik6/lib/mootools.js",
 		"/home/peter/public_html/OpenSource/Pik6/lib/pik.js",
-		"/home/peter/public_html/OpenSource/Pik6/Pik6.sublime-project",
+		"/home/peter/public_html/OpenSource/Pik6/lib/start.html",
+		"/home/peter/public_html/OpenSource/Pik6/presentations/Pik/index.html",
+		"/home/peter/public_html/OpenSource/Pik6/lib/presentation.css",
 		"/home/peter/public_html/OpenSource/Pik6/lib/frame.js",
-		"/home/peter/public_html/OpenSource/Pik6/lib/controls.js",
+		"/home/peter/public_html/OpenSource/Pik6/styles/Default/style.css",
 		"/home/peter/public_html/OpenSource/Pik6/frame.html",
+		"/home/peter/public_html/OpenSource/Pik6/lib/presentation.js",
+		"/home/peter/public_html/OpenSource/Pik6/lib/frame.css",
+		"/home/peter/public_html/OpenSource/Pik6/Pik6.sublime-project",
+		"/home/peter/public_html/OpenSource/Pik6/lib/controls.js",
 		"/home/peter/public_html/OpenSource/Pik6/lib/pik6.js",
 		"/home/peter/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 		"/home/peter/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
@@ -165,7 +158,6 @@
 		"/home/peter/.config/sublime-text-2/Packages/Default/Global.sublime-settings",
 		"/home/peter/public_html/OpenSource/Pik6/lib/test/test.html",
 		"/home/peter/.config/sublime-text-2/Packages/User/Global.sublime-settings",
-		"/home/peter/public_html/OpenSource/Pik6/lib/mootools.js",
 		"/home/peter/.gvfs/SFTP auf sirpepe.fornax.uberspace.de/home/sirpepe/html/assets/peterkroener.de/template/vars.styl",
 		"/home/peter/.gvfs/SFTP auf sirpepe.fornax.uberspace.de/home/sirpepe/html/assets/peterkroener.de/template/styles.styl",
 		"/home/peter/.gvfs/SFTP auf sirpepe.fornax.uberspace.de/home/sirpepe/html/assets/peterkroener.de/template/screen.styl",
@@ -194,6 +186,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pik6-slide",
 			"updateState = ",
 			"updateState(",
 			"post",
@@ -210,6 +203,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"pik-slide"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -220,110 +214,30 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "frame.html",
+					"file": "presentations/Pik/index.html",
 					"settings":
 					{
-						"buffer_size": 975,
+						"buffer_size": 5578,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								334,
-								334
+								270,
+								270
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "lib/frame.js",
-					"settings":
-					{
-						"buffer_size": 10947,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5552,
-								5552
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "lib/presentation.js",
-					"settings":
-					{
-						"buffer_size": 1733,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								704,
-								704
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "lib/frame.css",
-					"settings":
-					{
-						"buffer_size": 895,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -371,7 +285,7 @@
 	},
 	"replace":
 	{
-		"height": 0.0
+		"height": 86.0
 	},
 	"save_all_on_build": true,
 	"select_file":

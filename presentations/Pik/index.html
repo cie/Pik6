@@ -4,37 +4,18 @@
 	<meta charset="utf-8">
 	<title>Welcome to PIK6</title>
 	<meta http-equiv="expires" content="0">
-	<script src="../../lib/mootools.js"></script>             <!-- Important - do not remove! -->
-	<script src="../../lib/presentation.js"></script>         <!-- Important - do not remove! -->
-	<link href="../../lib/presentation.css" rel="stylesheet"> <!-- Important - do not remove! -->
-	<link href="../../lib/transitions.css" rel="stylesheet">
+	<script src="../../lib/pik.js"></script>
 	<link href="../../styles/Default/style.css" rel="stylesheet">
 	<base target="_blank">
-	<script src="assets/google-code-prettify/prettify.js"></script>
-	<style>
-		/* Demo I */
-		h2#special {
-			color: #FFF;
-			font-size: 100%;
-		}
-		:target h2#special {
-			-moz-transition: all 1s;
-			-webkit-transition: all 1s;
-			-ms-transition: all 1s;
-			-o-transition: all 1s;
-			transition: all 1s;
-			color: #AE1215;
-			font-size: 300%;
-		}
-	</style>
+	<script src="google-code-prettify/prettify.js"></script>
 </head>
 <body onload="prettyPrint()">
 
 <div id="hide"></div>                  <!-- Important - do not remove or rename! -->
 
-<div id="Pik6-presentation-container"> <!-- Important - do not remove or rename! -->
+<div id="Pik-presentation-container"> <!-- Important - do not remove or rename! -->
 
-<div class="pik6-slide" id="Start">
+<div class="pik-slide" id="Start">
 <h1>PIK6</h1>
 <h2>HTML5 presentation framework</h2>
 <p class="center">
@@ -42,7 +23,7 @@
 </p>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Features</h2>
 <ul>
 <li>100% HTML5, CSS and JavaScript (MooTools)
@@ -51,7 +32,7 @@
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Why?</h2>
 <ul>
 <li>Hackable, scriptable presentations
@@ -61,7 +42,7 @@
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Why not?</h2>
 <ul>
 <li>Only works in modern browsers
@@ -70,7 +51,7 @@
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Controls</h2>
 <ul>
 <li>Use the left and right arrow keys to navigate through the slides
@@ -80,7 +61,7 @@
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Additional keyboard shortcuts</h2>
 <ul>
 <li>Accesskey + <key>r</key>: Reload presentation
@@ -90,23 +71,23 @@
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Building presentations</h2>
 <pre class="prettyprint">&lt;!-- /presentations/whatever/whatever.html --&gt;
 &lt;div id=&quot;Pik6-presentation-container&quot;&gt;
 
-    &lt;div class=&quot;pik6-slide&quot;&gt;
+    &lt;div class=&quot;pik-slide&quot;&gt;
         First Slide
     &lt;/div&gt;
 
-    &lt;div class=&quot;pik6-slide&quot; id=&quot;whatever&quot;&gt;
+    &lt;div class=&quot;pik-slide&quot; id=&quot;whatever&quot;&gt;
         Second Slide
     &lt;/div&gt;
 
 &lt;/div&gt;</pre>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Presenter mode</h2>
 <ul>
 <li>Open <code>presenter.html</code> in a new window to use the presenter mode.
@@ -115,7 +96,7 @@
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Programming presentations</h2>
 <ul>
 <li>An <code>activate</code> event is fired on the slides when they are shown
@@ -124,7 +105,7 @@
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Simple programming example</h2>
 <pre class="prettyprint">window.addEvent('domready', function(){
     $('Demo').addEvents({
@@ -138,7 +119,7 @@
 });</pre>
 </div>
 
-<div class="pik6-slide center" id="Demo">
+<div class="pik-slide center" id="Demo">
 	<div class="center"></div>
 </div>
 <script>
@@ -153,7 +134,7 @@ window.addEvent('domready', function(){
     });
 });</script>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Scripting without scripts</h2>
 <ul>
 <li>The presentation is just an iframe with a url containing a hash
@@ -162,7 +143,7 @@ window.addEvent('domready', function(){
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Simple CSS "scripting" example</h2>
 <pre class="prettyprint">h2#special {
     color: #FFF;
@@ -175,22 +156,22 @@ window.addEvent('domready', function(){
 }</pre>
 </div>
 
-<div class="pik6-slide center">
+<div class="pik-slide center">
 	<div class="center">
 		<h2 id="special">Hello Demo!</h2>
 	</div>
 </div>
 
-<div class="pik6-slide pik6-transition-slide-in-left">
+<div class="pik-slide pik6-transition-slide-in-left">
 <h2>Slide transitions</h2>
 <ul>
 <li>Use <code>lib/transitions.css</code> in your presentation to enable slide transitions
 <li>Add a transition class to your slides to use a transition for this slide
-<li>Example: <code class="prettyprint language-html">&lt;div class="pik6-slide pik6-transition-fade"&gt;</code>
+<li>Example: <code class="prettyprint language-html">&lt;div class="pik-slide pik6-transition-fade"&gt;</code>
 </ul>
 </div>
 
-<div class="pik6-slide pik6-transition-fade">
+<div class="pik-slide pik6-transition-fade">
 <h2>Transition classes</h2>
 <ul>
 	<li><code>pik6-transition-slide-in-left</code>: slide in from the left
@@ -201,7 +182,7 @@ window.addEvent('domready', function(){
 </ul>
 </div>
 
-<div class="pik6-slide">
+<div class="pik-slide">
 <h2>Links</h2>
 <ul>
 	<li><a href="https://github.com/SirPepe/Pik6">Github</a>
