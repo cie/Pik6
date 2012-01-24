@@ -17,7 +17,7 @@
 
 <div class="pik-slide" id="Start">
 <h1>PIK6</h1>
-<h2>HTML5 presentation framework</h2>
+<h2>HTML5 presentation framework&nbsp;&ndash; an&nbsp;introduction</h2>
 <p class="center">
 	<a href="https://github.com/SirPepe/Pik6">github.com/SirPepe/Pik6</a>
 </p>
@@ -26,19 +26,20 @@
 <div class="pik-slide">
 <h2>Features</h2>
 <ul>
-<li>100% HTML5, CSS and JavaScript (MooTools)
+<li>100% HTML5, CSS and JavaScript (<a href="http://mootools.net/">MooTools</a>)
 <li>Multiple presentation views and presenter mode
 <li>Programmable slides
+<li>As fancy or a simple as you want it to be
 </ul>
 </div>
 
 <div class="pik-slide">
 <h2>Why?</h2>
 <ul>
+<li>Presenter mode
 <li>Hackable, scriptable presentations
 <li>Easy embedding of web pages, media, youtube videos …
 <li>Great performance in modern browsers even with hundreds of slides
-<li>Presenter mode
 </ul>
 </div>
 
@@ -46,8 +47,8 @@
 <h2>Why not?</h2>
 <ul>
 <li>Only works in modern browsers
-<li>Requires a web server
-<li>No PDF export
+<li>Requires a web server to run from
+<li>No PDF export, suboptimal printing
 </ul>
 </div>
 
@@ -57,51 +58,82 @@
 <li>Use the left and right arrow keys to navigate through the slides
 <li>Move your Mouse to the bottom of the presentation view to reveal more controls
 <li>The presenter view offers a drop down menu for all slides in the presentation
-<li>The F5 and ESC keys hide the presentation
+<li>The <key>F5</key> and <key>ESC</key> keys hide the presentation
 </ul>
-</div>
-
-<div class="pik-slide">
-<h2>Additional keyboard shortcuts</h2>
-<ul>
-<li>Accesskey + <key>r</key>: Reload presentation
-<li>Accesskey + <key>b</key>: Browser presentations
-<li>Accesskey + <key>o</key>: "Open URL" dialoge
-<li>Accesskey + <key>p</key>: Open presenter view
-</ul>
-</div>
-
-<div class="pik-slide">
-<h2>Building presentations</h2>
-<pre class="prettyprint">&lt;!-- /presentations/whatever/whatever.html --&gt;
-&lt;div id=&quot;Pik6-presentation-container&quot;&gt;
-
-    &lt;div class=&quot;pik-slide&quot;&gt;
-        First Slide
-    &lt;/div&gt;
-
-    &lt;div class=&quot;pik-slide&quot; id=&quot;whatever&quot;&gt;
-        Second Slide
-    &lt;/div&gt;
-
-&lt;/div&gt;</pre>
 </div>
 
 <div class="pik-slide">
 <h2>Presenter mode</h2>
 <ul>
 <li>Open <code>presenter.html</code> in a new window to use the presenter mode.
-<li>The presenter mode offers more control elements, shows a timer and lets you see the currently displayed slide and which slide comes next
+<li>The presenter mode offers more control elements, shows a timer and lets you see the
+currently displayed slide and which slide comes next
 <li>Currently requires Chrome 8 or newer.
 </ul>
 </div>
 
 <div class="pik-slide">
+<h2>Building presentations</h2>
+<pre class="prettyprint">&lt;!-- /presentations/Whatever/whatever.html --&gt;
+&lt;script src="../../lib/pik.js"&gt;&lt;/script&gt;
+&lt;div id=&quot;Pik-presentation-container&quot;&gt;
+    &lt;div class=&quot;pik-slide&quot;&gt;
+        First Slide
+    &lt;/div&gt;
+    &lt;div class=&quot;pik-slide&quot; id=&quot;dontcare&quot;&gt;
+        Second Slide
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+You can use <code>presentations/Template/index.html</code> as a starting point.
+</div>
+
+<div class="pik-slide">
+<h2>Styling presentations</h2>
+<ul>
+<li>Styles (simple CSS files) reside in the <code>styles</code> folder
+<li>Styles includes in PIK6:
+	<ul>
+		<li>Default (used in this presentation)
+		<li>Dark (simple white text on a dark backgroud)
+		<li>Fancy (demonstrates slide transitions, to be used with Default)
+	</ul>
+<li>Use <code>styles/Template/style.css</code> as a starting point for your own style
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Slide transitions</h2>
+<ul>
+<li>Slide visibility is completly managed by css; all slides except the one with the
+class <code>pik-current</code> are invisible by default
+<li>By changing the behavior of this class and the classes <code>pik-next</code> and
+<code>pik-prev</code> it is possible to create slide transitions
+<li>Try it! <a id="MakeFancy">Add a stylesheet with transitions</a> (<a id="RevertFancy">remove here</a>)
+</ul>
+</div>
+<script>
+$('MakeFancy').addEvent('click', function(){
+	if($('FancyStyles') === null){
+		new Element('link', {
+			'rel': 'stylesheet',
+			'href': '../../styles/Fancy/style.css',
+			'id': 'FancyStyles'
+		}).inject($$('head')[0]);
+	}
+});
+$('RevertFancy').addEvent('click', function(){
+	$$('#FancyStyles').destroy();
+});
+</script>
+
+
+<div class="pik-slide">
 <h2>Programming presentations</h2>
 <ul>
-<li>An <code>activate</code> event is fired on the slides when they are shown
-<li>A <code>deactivate</code> event when hidden
-<li>A <code>change</code> event is fired on the <code>document</code> object when slides change
+<li>An <code>slideactivate</code> event is fired on the slides when they are shown
+<li>A <code>slidedeactivate</code> event when hidden
+<li>A <code>slidechange</code> event is fired on the <code>window</code> object when slides change
 </ul>
 </div>
 
@@ -109,11 +141,11 @@
 <h2>Simple programming example</h2>
 <pre class="prettyprint">window.addEvent('domready', function(){
     $('Demo').addEvents({
-        'activate': function(){
-            this.getFirst().set('html', something);
+        'slideactivate': function(){
+            do_something();
         },
-        'deactivate': function(){
-            this.getFirst().set('html', '');
+        'slidedeactivate': function(){
+            do_something_else();
         }
     });
 });</pre>
@@ -125,72 +157,25 @@
 <script>
 window.addEvent('domready', function(){
     $('Demo').addEvents({
-        'activate': function(){
+        'slideactivate': function(){
             this.getFirst().set('html', '<iframe width="640" height="480" src="http://www.youtube.com/embed/Y1g2Cx03L2I?autoplay=1" frameborder="0" allowfullscreen></iframe>');
         },
-        'deactivate': function(){
+        'slidedeactivate': function(){
             this.getFirst().set('html', '');
         }
     });
 });</script>
 
 <div class="pik-slide">
-<h2>Scripting without scripts</h2>
-<ul>
-<li>The presentation is just an iframe with a url containing a hash
-<li>The slide with the id that matches the hash is made visible using the <code>:target</code> selector from CSS3
-<li>This allows you to trigger visual effects without using JavaScript
-</ul>
-</div>
-
-<div class="pik-slide">
-<h2>Simple CSS "scripting" example</h2>
-<pre class="prettyprint">h2#special {
-    color: #FFF;
-    font-size: 50%;
-}
-:target h2#special {
-    transition: all 1s;
-    color: #AE1215;
-    font-size: 100%;
-}</pre>
-</div>
-
-<div class="pik-slide center">
-	<div class="center">
-		<h2 id="special">Hello Demo!</h2>
-	</div>
-</div>
-
-<div class="pik-slide pik6-transition-slide-in-left">
-<h2>Slide transitions</h2>
-<ul>
-<li>Use <code>lib/transitions.css</code> in your presentation to enable slide transitions
-<li>Add a transition class to your slides to use a transition for this slide
-<li>Example: <code class="prettyprint language-html">&lt;div class="pik-slide pik6-transition-fade"&gt;</code>
-</ul>
-</div>
-
-<div class="pik-slide pik6-transition-fade">
-<h2>Transition classes</h2>
-<ul>
-	<li><code>pik6-transition-slide-in-left</code>: slide in from the left
-	<li><code>pik6-transition-slide-in-right</code>: slide in from the right
-	<li><code>pik6-transition-slide-in-top</code>: slide in from the top
-	<li><code>pik6-transition-slide-in-bottom</code>: slide in from the bottom
-	<li><code>pik6-transition-fade</code>: fade in and out
-</ul>
-</div>
-
-<div class="pik-slide">
 <h2>Links</h2>
 <ul>
-	<li><a href="https://github.com/SirPepe/Pik6">Github</a>
-	<li><a href="http://pik6.peterkroener.de/">Web site</a>
-	<li><a href="mailto:peter@peterkroener.de">Contact me!</code>
+<li><a href="https://github.com/SirPepe/Pik6">Github</a>
+(<a href="https://github.com/SirPepe/Pik6/issues">report bugs here!</a>)
+<li><a href="http://pik6.peterkroener.de/">Web site</a>
+<li><a href="mailto:peter@peterkroener.de">Contact me!</a>
 </ul>
 </div>
 
-</div> <!-- End #Pik6-presentation-container -->
+</div> <!-- End #Pik-presentation-container -->
 </body>
 </html>
