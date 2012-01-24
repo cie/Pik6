@@ -1,0 +1,73 @@
+/*
+ * Pik6 fancy theme demonstration
+ * ------------------------------
+ *
+ * As long as your slides have SOME kind of interesting content, you really don't need
+ * eye cancer-inducing slide transitions... but this file shows you how to make them,
+ * just in case. It requires a bit of CSS3 voodoo but works quite well.
+ */
+
+/* For general font and color styles */
+body {
+	font-size: 0.9em;
+	background: #10131a;
+}
+
+/* General slide styles */
+.pik-slide {
+	border-radius: 1em;
+	background: white;
+	box-shadow: 0.1em 0.1em 0.9em #000;
+	box-sizing: border-box;
+	padding: 0 1.5em;
+}
+
+/* The following rules overwrite defaults from lib/presentation.css to make room for the
+   box shadow and other effects */
+.pik-slide {
+	top: 3%;
+	left: 3%;
+	height: 94%;
+	width: 94%;
+}
+
+/* All inactive slides are deposited outside the frame to the left */
+.pik-slide {
+	left: -194%;
+}
+
+/* The active slide is positioned in the middle */
+.pik-slide.pik-current {
+	z-index: 9002;
+	left: 3%;
+}
+
+/* The previous slide moves out of the frame to the left */
+.pik-slide.pik-prev {
+	z-index: 9000;
+	visibility: visible;
+	left: -97%;
+}
+
+/* The next slide comes into the frame from the right */
+.pik-slide.pik-next {
+	z-index: 9001;
+	visibility: visible;
+	left: 103%;
+}
+
+/* The slide after the next slide comes into the frame from the right too */
+.pik-slide.pik-next ~ .pik-slide {
+	visibility: visible;
+	left: 203%;
+}
+
+/* Hide the rest of the slides for performance reasons */
+.pik-slide.pik-next ~ .pik-slide ~ .pik-slide {
+	display: none;
+}
+
+/* Add a fancy transition */
+.pik-slide {
+	-webkit-transition: left 2s, visibility 2s;
+}
