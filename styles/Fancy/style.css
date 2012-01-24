@@ -17,7 +17,7 @@ body {
 .pik-slide {
 	border-radius: 1em;
 	background: white;
-	box-shadow: 0.1em 0.1em 0.9em #000;
+	box-shadow: 0.15em 0.15em 2em #000;
 	box-sizing: border-box;
 	padding: 0 1.5em;
 }
@@ -33,33 +33,51 @@ body {
 
 /* All inactive slides are deposited outside the frame to the left */
 .pik-slide {
-	left: -194%;
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
 }
 
 /* The active slide is positioned in the middle */
 .pik-slide.pik-current {
-	z-index: 9002;
-	left: 3%;
+	z-index: 9000;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
 }
 
 /* The previous slide moves out of the frame to the left */
 .pik-slide.pik-prev {
-	z-index: 9000;
 	visibility: visible;
-	left: -97%;
+	-webkit-transform: translateX(-100%) scale(0.85);
+	-moz-transform: translateX(-100%) scale(0.85);
+	-ms-transform: translateX(-100%) scale(0.85);
+	-o-transform: translateX(-100%) scale(0.85);
+	transform: translateX(-100%) scale(0.85);
 }
 
 /* The next slide comes into the frame from the right */
 .pik-slide.pik-next {
-	z-index: 9001;
 	visibility: visible;
-	left: 103%;
+	-webkit-transform: translateX(100%) scale(0.85);
+	-moz-transform: translateX(100%) scale(0.85);
+	-ms-transform: translateX(100%) scale(0.85);
+	-o-transform: translateX(100%) scale(0.85);
+	transform: translateX(100%) scale(0.85);
 }
 
 /* The slide after the next slide comes into the frame from the right too */
 .pik-slide.pik-next ~ .pik-slide {
 	visibility: visible;
-	left: 203%;
+	-webkit-transform: translateX(200%) scale(0.70);
+	-moz-transform: translateX(200%) scale(0.70);
+	-ms-transform: translateX(200%) scale(0.70);
+	-o-transform: translateX(200%) scale(0.70);
+	transform: translateX(200%) scale(0.70);
 }
 
 /* Hide the rest of the slides for performance reasons */
@@ -69,5 +87,11 @@ body {
 
 /* Add a fancy transition */
 .pik-slide {
-	-webkit-transition: left 2s, visibility 2s;
+	-webkit-transition: -webkit-transform 1500ms, visibility 1500ms;
+	-moz-transition: -moz-transform 1500ms, visibility 1500ms;
+	-ms-transition: -ms-transform 1500ms, visibility 1500ms;
+	-o-transition: -o-transform 1500ms, visibility 1500ms;
+	transition: transform 1500ms, visibility 1500ms;
 }
+
+/* Fuck vendor prefixes. */
