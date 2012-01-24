@@ -28,7 +28,7 @@ html, body, #Pik-presentation-container {
 /* Hide overlay */
 #hide {
 	background: #000;
-	z-index: 1337;
+	z-index: 999999999999999999;
 }
 
 /* Special classes make slides and hide overlay visible */
