@@ -1,5 +1,4 @@
 html, body {
-	background: #FFF;
 	overflow: hidden;
 	font-size: 15px;
 	font-family: Arial, sans-serif;
@@ -8,6 +7,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+
 a, a:link, a:visited {
 	color: #000;
 	border-bottom: 1px solid #000;
@@ -19,7 +19,7 @@ a:hover, a:active {
 	border-bottom: 1px solid transparent;
 }
 
-#Pik6-wrapper {
+#Pik-wrapper {
 	position: relative;
 	width: 960px;
 	margin: 0 auto;
@@ -37,13 +37,13 @@ iframe {
 iframe:hover {
 	z-index: 1337;
 }
-#Pik6-frame {
+#Pik-frame {
 	position: relative;
 	float: left;
 	width: 640px;
 	height: 480px;
 }
-#Pik6-frame-preview {
+#Pik-frame-preview {
 	position: absolute;
 	top: 64px;
 	right: 0;
@@ -51,7 +51,7 @@ iframe:hover {
 	height: 308px;
 }
 
-#Pik6-timecontainer {
+#Pik-timecontainer {
 	font-size: 21px;
 	color: #EEE;
 	text-align: right;
@@ -59,21 +59,20 @@ iframe:hover {
 	top: 32px;
 	right: 0;
 }
-#Pik6-timecontainer span {
+#Pik-timecontainer span {
 	color: #000;
 }
-#Pik6-elapsed {
+#Pik-elapsed {
 	font-weight: bold;
 }
-#Pik6-framecontrols-slidecount {
+#Pik-framecontrols-slidecount {
 	font-size: 40px;
 	font-weight: bold;
 	float: left;
 	margin-right: 32px
 }
 
-
-#Pik6-slideselect {
+#Pik-slideselect {
 	font-size: inherit;
 	width: 296px;
 	position: absolute;
@@ -81,7 +80,7 @@ iframe:hover {
 	right: 0;
 }
 
-#Pik6-framecontrols {
+#Pik-framecontrols {
 	text-align: right;
 	position: absolute;
 	top: 480px;
