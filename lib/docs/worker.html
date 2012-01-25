@@ -22,9 +22,9 @@ listener for incoming message  and post the cached state.</p>             </td> 
 	<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">ports</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 	<span class="nx">clients</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
 	<span class="nx">port</span><span class="p">.</span><span class="nx">onmessage</span> <span class="o">=</span> <span class="nx">handleIncomingState</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">port</span><span class="p">);</span>
-	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">cached_state</span><span class="p">.</span><span class="nx">initialized</span><span class="p">){</span>
-		<span class="nx">cached_state</span><span class="p">.</span><span class="nx">initialized</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-	<span class="p">}</span>
+	<span class="cm">/*if(!cached_state.initialized){</span>
+<span class="cm">		cached_state.initialized = true;</span>
+<span class="cm">	}*/</span>
 	<span class="nx">port</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="nx">cached_state</span><span class="p">);</span>
 <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>Process an incoming state from one of the presentation instances. Merge the incoming
 state with the current state and, if there was any new information, broadcast the

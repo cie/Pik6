@@ -20,7 +20,7 @@ Features
 How to use
 ----------
 
-   1. Add a html file in /presentations/ and edit/add slides (`<div class="pik6-slide">`)
+   1. Add a html file in /presentations/ and edit/add slides (`<div class="pik-slide">`)
    2. Open the presentation framework (frame.html) in Firefox 3.6+, Safari 5+, Opera 10.60+ or Chrome 8+ (recommended)
    3. Use the "browse" function to load your presentation in the frame
    4. For multiple presentation views simply open more instances of frame.html in new browser windows (Chrome 8+ required)
