@@ -4,7 +4,8 @@
  *
  * As long as your slides have SOME kind of interesting content, you really don't need
  * eye cancer-inducing slide transitions... but this file shows you how to make them,
- * just in case. It requires a bit of CSS3 voodoo but works quite well.
+ * just in case. It requires a bit of CSS3 voodoo but works quite well in combination
+ * with the default style.
  */
 
 /* For general font and color styles */
@@ -87,11 +88,11 @@ body {
 
 /* Add a fancy transition */
 .pik-slide {
-	-webkit-transition: -webkit-transform 1500ms, visibility 1500ms;
-	-moz-transition: -moz-transform 1500ms, visibility 1500ms;
-	-ms-transition: -ms-transform 1500ms, visibility 1500ms;
-	-o-transition: -o-transform 1500ms, visibility 1500ms;
-	transition: transform 1500ms, visibility 1500ms;
+	-webkit-transition: -webkit-transform 750ms, visibility 750ms;
+	-moz-transition: -moz-transform 750ms, visibility 750ms;
+	-ms-transition: -ms-transform 750ms, visibility 750ms;
+	-o-transition: -o-transform 750ms, visibility 750ms;
+	transition: transform 750ms, visibility 750ms;
 }
 
 /* Fuck vendor prefixes. */
