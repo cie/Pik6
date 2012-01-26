@@ -11,20 +11,29 @@
 <body>
 <div id="hide"></div>
 <div id="Pik-presentation-container">
-	<div class="pik-slide" id="Start">
-		<h1>PIK6</h1>
-		<h2>HTML5 presentation framework</h2>
-		<p class="center">
-			<a id="Pik-browse" href="../presentations">Browse presentations</a>
-			<br>
-			<a target="_blank" href="../presenter.html">Launch the presenter view</a>
-			<br>
-			<a href="../presentations/Pik/">How to use</a>
-		</p>
-	</div>
-	<!--<div class="pik-slide">-->
-		<!-- Just a blank slide for the presenter's preview frame -->
-	<!--</div>-->
+
+<div class="pik-slide" id="Start">
+	<h1>PIK6</h1>
+	<h2>HTML5 presentation framework</h2>
+	<p class="center" style="margin-top: -0.5em;">
+		<a id="Pik-browse" href="../presentations">Browse presentations</a>
+		<br>
+		<a target="_blank" href="../presenter.html">Launch the presenter view *</a>
+		<br>
+		<a href="../presentations/Pik/">How to use</a>
+		<br>
+		<small style="font-size: 0.45em;">* requires a browser that supports <a href="http://www.w3.org/TR/workers/">Shared Workers</a>. <span style="display: inline-block; padding: 2px;" id="Support"></span></small>
+	</p>
+</div>
+<script>
+if(typeof SharedWorker === 'function'){
+	$('Support').setStyle('background', 'lime').set('text', 'Your browser does!')
+}
+else {
+	$('Support').setStyle('background', 'red').set('text', 'Your browser doesn\'t!');
+}
+</script>
+
 </div>
 </body>
 </html>
