@@ -19,6 +19,8 @@ body {
 	border-radius: 1em;
 	background: white;
 	box-shadow: 0.15em 0.15em 2em #000;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0 1.5em;
 }
