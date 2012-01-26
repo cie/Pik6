@@ -39,6 +39,6 @@ html, body, iframe {
 	text-decoration: none;
 	color: #FFF !important;
 }
-#Pik-framecontrols a:not(:last-child)::after, #Pik-framecontrols span:not(:last-child)::after {
+#Pik-framecontrols a:not(:first-child)::before, #Pik-framecontrols span:not(:first-child)::before {
 	content: "  |  ";
 }
