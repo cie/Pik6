@@ -21,7 +21,7 @@ Drawbacks
 --------
 
   * Requires a modern browser and a web server to run from
-  * Includes **no fancy stuff** by default. You'll have to build yuor super-awesome 3D slide transitions by yourself.
+  * Includes **no fancy stuff** by default. You'll have to build your super-awesome 3D slide transitions by yourself.
   * All drawbacks common to HTML slides (no PDF export, images hard to use)
 
 How to use
