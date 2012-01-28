@@ -11,7 +11,7 @@
 </head>
 <body onload="prettyPrint()">
 
-<div id="hide"></div>                  <!-- Important - do not remove or rename! -->
+<div id="Pik-hide"></div>             <!-- Important - do not remove or rename! -->
 
 <div id="Pik-presentation-container"> <!-- Important - do not remove or rename! -->
 
@@ -46,18 +46,26 @@
 <div class="pik-slide">
 <h2>Why not?</h2>
 <ul>
-<li>Only works in modern browsers
+<li>Requires a modern web browser
 <li>Requires a web server to run from
-<li>Shares all drawbacks common to HTML slides (no PDF export, images hard to use)
+<li>Shares all drawbacks common to HTML slides (no GUI to create presentations, no PDF export, images hard to use)
 </ul>
+</div>
+
+<div class="pik-slide">
+<h2>Getting started</h2>
+<ol>
+<li>Download Pik6 from <a href="https://github.com/SirPepe/Pik6">Github</a> or <code>git clone git://github.com/SirPepe/Pik6.git</code>
+<li>Place the files in a directory on your web server
+<li>Open Pik6 in a browser, click the "Browse" link to navigate through the slide sets
+</ol>
 </div>
 
 <div class="pik-slide">
 <h2>Controls</h2>
 <ul>
 <li>Use the left and right arrow keys to navigate through the slides
-<li>Move your Mouse to the bottom of the presentation view to reveal more controls
-<li>The presenter view offers a drop down menu for all slides in the presentation
+<li>Move your Mouse to the bottom of the presentation view to reveal a panel with more controls
 <li>The <key>F5</key> and <key>ESC</key> keys hide the presentation
 </ul>
 </div>
@@ -66,9 +74,9 @@
 <h2>Presenter mode</h2>
 <ul>
 <li>Open <code>presenter.html</code> in a new window to use the presenter mode.
-<li>The presenter mode offers more control elements, shows a timer and lets you see the
+<li>The presenter mode offers more control elements, displays a timer and lets you see the
 currently displayed slide and which slide comes next
-<li>Requires Chrome 8+, Opera 11+ or Safari 5+ or newer.
+<li>Requires a browser that supports <a href="http://www.w3.org/TR/workers/">Shared Workers</a> (Chrome 8+, Opera 11+ or Safari 5+)
 </ul>
 </div>
 
@@ -76,13 +84,11 @@ currently displayed slide and which slide comes next
 <h2>Building presentations</h2>
 <pre class="prettyprint">&lt;!-- /presentations/Whatever/whatever.html --&gt;
 &lt;script src="../../lib/pik.js"&gt;&lt;/script&gt;
+&lt;div id=&quot;Pik-hide&quot;&gt;&lt;/div&gt;
+
 &lt;div id=&quot;Pik-presentation-container&quot;&gt;
-    &lt;div class=&quot;pik-slide&quot;&gt;
-        First Slide
-    &lt;/div&gt;
-    &lt;div class=&quot;pik-slide&quot; id=&quot;dontcare&quot;&gt;
-        Second Slide
-    &lt;/div&gt;
+    &lt;div class=&quot;pik-slide&quot;&gt;First Slide&lt;/div&gt;
+    &lt;div class=&quot;pik-slide&quot;&gt;Second Slide&lt;/div&gt;
 &lt;/div&gt;</pre>
 <p>
 You can use <code>presentations/Template/index.html</code> as a starting point.
@@ -172,7 +178,8 @@ window.addEvent('domready', function(){
 <li><a href="https://github.com/SirPepe/Pik6">Github</a>
 (<a href="https://github.com/SirPepe/Pik6/issues">report bugs here!</a>)
 <li><a href="http://pik6.peterkroener.de/">Web site</a>
-<li><a href="mailto:peter@peterkroener.de">Contact me!</a>
+<li><a href="https://flattr.com/thing/b216317619d293466765285f678a0d9d">Support the project</a>
+<li><a href="mailto:peter@peterkroener.de">Contact me</a>
 </ul>
 </div>
 

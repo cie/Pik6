@@ -1,4 +1,4 @@
-PIK6
+PIK6 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Sir_Pepe&url=https://github.com/SirPepe/Pik6/&title=Pik6&language=en&tags=github&category=software) 
 ====
 
 HTML5 presentation framework (MIT license)
@@ -8,8 +8,6 @@ HTML5 presentation framework (MIT license)
 [http://github.com/SirPepe/Pik6][2]
 
 ![Screenshot](https://github.com/SirPepe/Pik6/raw/master/screenshot.png)
-
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Sir_Pepe&url=https://github.com/SirPepe/Pik6/&title=Pik6&language=en&tags=github&category=software) 
 
 Features
 --------
