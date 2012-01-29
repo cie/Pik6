@@ -1,3 +1,4 @@
+/* Basics, iframe */
 html, body {
 	overflow: hidden;
 	font-size: 15px;
@@ -11,6 +12,8 @@ html, body, iframe {
 	margin: 0;
 	padding: 0;
 }
+
+/* Frame control panel */
 #Pik-framecontrols {
 	text-align: center;
 	z-index: 1337;

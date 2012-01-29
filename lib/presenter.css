@@ -1,3 +1,4 @@
+/* Basics */
 html, body {
 	overflow: hidden;
 	font-size: 15px;
@@ -7,24 +8,13 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-
-a, a:link, a:visited {
-	color: #000;
-	border-bottom: 1px solid #000;
-	cursor: pointer;
-	text-decoration: none;
-}
-a:hover, a:active {
-	color: #000;
-	border-bottom: 1px solid transparent;
-}
-
 #Pik-wrapper {
 	position: relative;
 	width: 960px;
 	margin: 0 auto;
 }
 
+/* Iframes */
 iframe {
 	background: #FFF;
 	border: 4px solid #FFF;
@@ -51,6 +41,7 @@ iframe:hover {
 	height: 308px;
 }
 
+/* Timer and slide counter */
 #Pik-timecontainer {
 	font-size: 21px;
 	color: #EEE;
@@ -72,6 +63,7 @@ iframe:hover {
 	margin-right: 32px
 }
 
+/* Slide controls */
 #Pik-slideselect {
 	font-size: inherit;
 	width: 296px;
@@ -79,11 +71,20 @@ iframe:hover {
 	top: 432px;
 	right: 0;
 }
-
 #Pik-framecontrols {
 	text-align: right;
 	position: absolute;
 	top: 480px;
 	right: 0;
 	margin: 0;
+}
+a, a:link, a:visited {
+	color: #000;
+	border-bottom: 1px solid #000;
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #000;
+	border-bottom: 1px solid transparent;
 }
