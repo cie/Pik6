@@ -1,4 +1,4 @@
-PIK6 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Sir_Pepe&url=https://github.com/SirPepe/Pik6/&title=Pik6&language=en&tags=github&category=software) 
+PIK6 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Sir_Pepe&url=https://github.com/SirPepe/Pik6/&title=Pik6&language=en&tags=github&category=software)
 ====
 
 HTML5 presentation framework (MIT license)
@@ -29,10 +29,10 @@ How to use
 
    1. `git clone git://github.com/SirPepe/Pik6.git`
    2. Copy the html file in `/presentations/Template` to `/presentations/yourslidestitle`. Edit/add slides (`<div class="pik-slide">`).
-   3. Open the presentation framework (`index.html`) in Firefox, Safari, Opera or Chrome (modern IE versions might work too, but who knows)
+   3. Open the presentation framework (`index.html`) in a recent version of your favorite browser
    4. Use the "browse" function to load your presentation into the frame
-   5. For multiple presentation views simply open more instances of `index.html` in new browser windows (Chrome 8+, Opera 11+ or Safari 5+ required)
-   6. Use the menu at the bottom of `index.html` to open the presenter view or point your browser to `presenter.html` (Chrome 8+, Opera 11+ or Safari 5+ required)
+   5. For multiple presentation views simply open more instances of `index.html` in new browser windows (Chrome 8+ or Opera 11+ required)
+   6. Use the menu at the bottom of `index.html` to open the presenter view or point your browser to `presenter.html` (Chrome 8+ or Opera 11+ required)
    7. Navigate slides using the arrow keys. Hide the presentation using the F5 or ESC key
 
 See [the slides about PIK6][1] for more details.
