@@ -10,7 +10,7 @@ body {
 	background: #FFF;
 	color: #000;
 }
-.pik6-slide {
+.pik-slide {
 	font-size: 0.75em;
 }
 
@@ -24,7 +24,13 @@ h1 {
 	font-size: 4.5em;
 	text-align: center;
 	font-weight: normal;
-	margin-top: 0.25em;
+	margin-top: 0.15em;
+}
+h1 span {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 0.3em;
+	display: block;
 }
 h2 {
 	font-style: italic;
@@ -40,6 +46,14 @@ pre {
 	overflow: hidden;
 	line-height: 1.4;
 }
+pre, code {
+	font-family: Monaco, "Bitstream Vera Sans Mono", "DejaVu Sans Mono" "Lucida Console", Consolas, Terminal, monospace;
+}
+code {
+	background: rgb(250, 250, 250);
+	border: 1px solid rgb(240, 240, 240);
+	padding: 0.1em;
+}
 a, a:link, a:visited {
 	cursor: pointer;
 	color: #AE1215;
@@ -52,6 +66,27 @@ a:visited {
 a:hover, a:active {
 	color: #000;
 	border-bottom: 0.1em solid transparent;
+}
+kbd {
+	font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	border-radius: 0.3em;
+	border: none;
+	background: rgb(250, 250, 250);
+	background: -webkit-linear-gradient(top, rgb(210, 210, 210), rgb(255, 255, 255));
+	background: -moz-linear-gradient(top, rgb(210, 210, 210), rgb(255, 255, 255));
+	background: -ms-linear-gradient(top, rgb(210, 210, 210), rgb(255, 255, 255));
+	background: -o-linear-gradient(top, rgb(210, 210, 210), rgb(255, 255, 255));
+	background: linear-gradient(to top, rgb(210, 210, 210), rgb(255, 255, 255));
+	color: rgb(50, 50, 50);
+	text-shadow: 0 0 2px rgb(255, 255, 255);
+	-webkit-box-shadow: inset 0 0 1px rgb(255, 255, 255), inset 0 0 0.4em rgb(200, 200, 200), 0 0.1em 0 rgb(130, 130, 130), 0 0.11em 0 rgba(0, 0, 0, 0.4), 0 0.1em 0.11em rgba(0, 0, 0, 0.9);
+	-moz-box-shadow: inset 0 0 1px rgb(255, 255, 255), inset 0 0 0.4em rgb(200, 200, 200), 0 0.1em 0 rgb(130, 130, 130), 0 0.11em 0 rgba(0, 0, 0, 0.4), 0 0.1em 0.11em rgba(0, 0, 0, 0.9);
+	box-shadow: inset 0 0 1px rgb(255, 255, 255), inset 0 0 0.4em rgb(200, 200, 200), 0 0.1em 0 rgb(130, 130, 130), 0 0.11em 0 rgba(0, 0, 0, 0.4), 0 0.1em 0.11em rgba(0, 0, 0, 0.9);
+	display: inline-block;
+	line-height: 1;
+	padding: 0.2em 0.3em;
 }
 
 /* Wrap two .center elements to center their children

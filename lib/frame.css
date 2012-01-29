@@ -1,3 +1,4 @@
+/* Basics, iframe */
 html, body {
 	overflow: hidden;
 	font-size: 15px;
@@ -11,7 +12,9 @@ html, body, iframe {
 	margin: 0;
 	padding: 0;
 }
-#Pik6-framecontrols {
+
+/* Frame control panel */
+#Pik-framecontrols {
 	text-align: center;
 	z-index: 1337;
 	position: absolute;
@@ -19,7 +22,7 @@ html, body, iframe {
 	left: 0;
 	right: 0;
 }
-#Pik6-framecontrols > div {
+#Pik-framecontrols > div {
 	opacity: 0;
 	-moz-transition: opacity 250ms ease-out;
 	-webkit-transition: opacity 250ms ease-out;
@@ -31,11 +34,14 @@ html, body, iframe {
 	color: #FFF;
 	padding: 0.5em 0.75em;
 }
-#Pik6-framecontrols:hover div {
+#Pik-framecontrols:hover div {
 	opacity: 1;
 }
-#Pik6-framecontrols a {
+#Pik-framecontrols a {
 	cursor: pointer;
 	text-decoration: none;
 	color: #FFF !important;
+}
+#Pik-framecontrols a:not(:first-child)::before, #Pik-framecontrols span:not(:first-child)::before {
+	content: "  |  ";
 }

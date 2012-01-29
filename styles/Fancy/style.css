@@ -1,0 +1,100 @@
+/*
+ * Pik6 fancy theme demonstration
+ * ------------------------------
+ *
+ * As long as your slides have SOME kind of interesting content, you really don't need
+ * eye cancer-inducing slide transitions... but this file shows you how to make them,
+ * just in case. It requires a bit of CSS3 voodoo but works quite well in combination
+ * with the default style.
+ */
+
+/* For general font and color styles */
+body {
+	font-size: 0.9em;
+	background: #10131a;
+}
+
+/* General slide styles */
+.pik-slide {
+	border-radius: 1em;
+	background: white;
+	box-shadow: 0.15em 0.15em 2em #000;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 1.5em;
+}
+
+/* The following rules overwrite defaults from lib/presentation.css to make room for the
+   box shadow and other effects */
+.pik-slide {
+	top: 3%;
+	left: 3%;
+	height: 94%;
+	width: 94%;
+}
+
+/* All inactive slides are deposited outside the frame to the left */
+.pik-slide {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
+}
+
+/* The active slide is positioned in the middle */
+.pik-slide.pik-current {
+	z-index: 9000;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+
+/* The previous slide moves out of the frame to the left */
+.pik-slide.pik-prev {
+	visibility: visible;
+	-webkit-transform: translateX(-100%) scale(0.85);
+	-moz-transform: translateX(-100%) scale(0.85);
+	-ms-transform: translateX(-100%) scale(0.85);
+	-o-transform: translateX(-100%) scale(0.85);
+	transform: translateX(-100%) scale(0.85);
+}
+
+/* The next slide comes into the frame from the right */
+.pik-slide.pik-next {
+	visibility: visible;
+	-webkit-transform: translateX(100%) scale(0.85);
+	-moz-transform: translateX(100%) scale(0.85);
+	-ms-transform: translateX(100%) scale(0.85);
+	-o-transform: translateX(100%) scale(0.85);
+	transform: translateX(100%) scale(0.85);
+}
+
+/* The slide after the next slide comes into the frame from the right too */
+.pik-slide.pik-next ~ .pik-slide {
+	visibility: visible;
+	-webkit-transform: translateX(200%) scale(0.70);
+	-moz-transform: translateX(200%) scale(0.70);
+	-ms-transform: translateX(200%) scale(0.70);
+	-o-transform: translateX(200%) scale(0.70);
+	transform: translateX(200%) scale(0.70);
+}
+
+/* Hide the rest of the slides for performance reasons */
+.pik-slide.pik-next ~ .pik-slide ~ .pik-slide {
+	display: none;
+}
+
+/* Add a fancy transition */
+.pik-slide {
+	-webkit-transition: -webkit-transform 750ms, visibility 750ms;
+	-moz-transition: -moz-transform 750ms, visibility 750ms;
+	-ms-transition: -ms-transform 750ms, visibility 750ms;
+	-o-transition: -o-transform 750ms, visibility 750ms;
+	transition: transform 750ms, visibility 750ms;
+}
+
+/* Fuck vendor prefixes. */

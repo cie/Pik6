@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to PIK6</title>
+	<meta http-equiv="expires" content="0">
+	<script src="../../lib/pik.js"></script>
+	<link href="../../styles/Default/style.css" rel="stylesheet">
+	<script src="google-code-prettify/prettify.js"></script>
+	<base target="_blank">
+</head>
+<body onload="prettyPrint()">
+
+<div id="Pik-hide"></div>             <!-- Important - do not remove or rename! -->
+
+<div id="Pik-presentation-container"> <!-- Important - do not remove or rename! -->
+
+<div class="pik-slide" id="Start">
+<h1>
+	<span>An introduction to</span>
+	PIK6
+</h1>
+<h2>HTML5 presentation framework</h2>
+<p class="center">
+	Press <kbd>&rarr;</kbd> to learn more
+</p>
+</div>
+
+<div class="pik-slide">
+<h2>Features</h2>
+<ul>
+<li>100% HTML5, CSS and JavaScript (<a href="http://mootools.net/">MooTools</a>)
+<li>Multiple presentation views and presenter mode
+<li>Programmable slides
+<li>As fancy or a simple as you want it to be
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Why use it?</h2>
+<ul>
+<li>Presenter mode
+<li>Hackable, scriptable presentations
+<li>Easy embedding of web pages, media, youtube videos …
+<li>Great performance in modern browsers even with hundreds of slides
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Why not?</h2>
+<ul>
+<li>Requires a modern web browser
+<li>Requires a web server to run from
+<li>Shares all drawbacks common to HTML slides (no GUI to create presentations, no PDF export, images hard to use)
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Getting started</h2>
+<ol>
+<li>Download Pik6 from <a href="https://github.com/SirPepe/Pik6">Github</a> or <code>git clone git://github.com/SirPepe/Pik6.git</code>
+<li>Place the files in a directory on your web server
+<li>Open Pik6 in a browser, click the "Browse" link to navigate through the slide sets
+</ol>
+</div>
+
+<div class="pik-slide">
+<h2>Controls</h2>
+<ul>
+<li>Use the left and right arrow keys to navigate through the slides
+<li>Move your Mouse to the bottom of the presentation view to reveal a panel with more controls
+<li>The <kbd>F5</kbd> and <kbd>ESC</kbd> keys hide the presentation
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Presenter mode</h2>
+<ul>
+<li>Open <code>presenter.html</code> in a new window to use the presenter mode.
+<li>The presenter mode offers more control elements, displays a timer and lets you see the
+currently displayed slide and which slide comes next
+<li>Requires a browser that supports <a href="http://www.w3.org/TR/workers/">Shared Workers</a> (Chrome 8+ or Opera 11+)
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Building presentations</h2>
+<pre class="prettyprint">&lt;!-- /presentations/Foo/bar.html --&gt;
+&lt;script src="../../lib/pik.js"&gt;&lt;/script&gt;
+&lt;div id=&quot;Pik-hide&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;Pik-presentation-container&quot;&gt;
+  &lt;div class=&quot;pik-slide&quot;&gt;First Slide&lt;/div&gt;
+  &lt;div class=&quot;pik-slide&quot;&gt;Second Slide&lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+You can use <code>presentations/Template/index.html</code> as a starting point.
+</div>
+
+<div class="pik-slide">
+<h2>Styling presentations</h2>
+<ul>
+<li>Styles (simple CSS files) reside in the <code>styles</code> folder
+<li>Styles includes in PIK6:
+	<ul>
+		<li>Default (used in this presentation)
+		<li>Dark (simple white text on a dark backgroud)
+		<li>Fancy (demonstrates slide transitions, to be used together with Default)
+	</ul>
+<li>Use <code>styles/Template/style.css</code> as a starting point for your own style
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Slide transitions</h2>
+<ul>
+<li>Slide visibility is completly managed by css; all slides except the one with the
+class <code>pik-current</code> are invisible by default
+<li>By changing the behavior of this class and the classes <code>pik-next</code> and
+<code>pik-prev</code> it is possible to create slide transitions
+<li>Try it! <a id="MakeFancy">Add a stylesheet with transitions</a> (<a id="RevertFancy">remove here</a>)
+</ul>
+</div>
+<script>
+$('MakeFancy').addEvent('click', function(){
+	if($('FancyStyles') === null){
+		new Element('link', {
+			'rel': 'stylesheet',
+			'href': '../../styles/Fancy/style.css',
+			'id': 'FancyStyles'
+		}).inject($$('head')[0]);
+	}
+});
+$('RevertFancy').addEvent('click', function(){
+	$$('#FancyStyles').destroy();
+});
+</script>
+
+
+<div class="pik-slide">
+<h2>Programming presentations</h2>
+<ul>
+<li>An <code>slideactivate</code> event is fired on the slides when they are shown
+<li>A <code>slidedeactivate</code> event when hidden
+<li>A <code>slidechange</code> event is fired on the <code>window</code> object when slides change
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Simple programming example</h2>
+<pre class="prettyprint">window.addEvent('domready', function(){
+    $('Demo').addEvents({
+        'slideactivate': function(){
+            do_something();
+        },
+        'slidedeactivate': function(){
+            do_something_else();
+        }
+    });
+});</pre>
+</div>
+
+<div class="pik-slide center" id="Demo">
+	<div class="center" style="width:640px; height:480px; background:url(loader.gif) center center no-repeat;"></div>
+</div>
+<script>
+window.addEvent('domready', function(){
+    $('Demo').addEvents({
+        'slideactivate': function(){
+            this.getFirst().set('html', '<iframe width="640" height="480" src="http://www.youtube.com/embed/Y1g2Cx03L2I?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        },
+        'slidedeactivate': function(){
+            this.getFirst().set('html', '');
+        }
+    });
+});</script>
+
+<div class="pik-slide">
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/SirPepe/Pik6">Github</a>
+(<a href="https://github.com/SirPepe/Pik6/issues">report bugs here!</a>)
+<li><a href="http://pik6.peterkroener.de/">Web site</a>
+<li><a href="https://flattr.com/thing/b216317619d293466765285f678a0d9d">Support the project</a>
+<li><a href="mailto:peter@peterkroener.de">Contact me</a>
+</ul>
+</div>
+
+</div> <!-- End #Pik-presentation-container -->
+</body>
+</html>
