@@ -26,16 +26,19 @@ getCurrent(). If they differ, events won't be fired because they are
 not needed in preview iframes.</p>             </td>             <td class="code">               <div class="highlight"><pre>				<span class="kd">var</span> <span class="nx">fire_events</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">===</span> <span class="nb">window</span><span class="p">.</span><span class="nx">parent</span><span class="p">.</span><span class="nx">pik</span><span class="p">.</span><span class="nx">getCurrent</span><span class="p">());</span></pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <p>A slide change involves the follwoing steps:</p>
 
 <ol>
-<li>Remove old slides' classes</li>
+<li>Remove old slides' classes and the old body class</li>
 <li>If events are to be fired, fire the <code>slidedeactivate</code> event on the
 previously current slide</li>
 <li>Set the variables for new slide numbers (<code>slide</code>, <code>slide</code> and
 <code>prev</code>) and add classes to their respective DOM objects</li>
+<li>Add a class to the body element, indicating the slide currently
+active</li>
 <li>If events are to be fired, fire the <code>slideactivate</code> event on the new
 current slide and the <code>slidechange</code> event on the window object</li>
 </ol>             </td>             <td class="code">               <div class="highlight"><pre>				<span class="nx">$$</span><span class="p">(</span><span class="nx">pik</span><span class="p">.</span><span class="nx">slides</span><span class="p">[</span><span class="nx">slide</span><span class="p">]).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;pik-current&#39;</span><span class="p">);</span>
 				<span class="nx">$$</span><span class="p">(</span><span class="nx">pik</span><span class="p">.</span><span class="nx">slides</span><span class="p">[</span><span class="nx">next</span><span class="p">]).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;pik-next&#39;</span><span class="p">);</span>
 				<span class="nx">$$</span><span class="p">(</span><span class="nx">pik</span><span class="p">.</span><span class="nx">slides</span><span class="p">[</span><span class="nx">prev</span><span class="p">]).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;pik-prev&#39;</span><span class="p">);</span>
+				<span class="nx">$$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;pik-body-slide-&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">slide</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
 				<span class="k">if</span><span class="p">(</span><span class="nx">fire_events</span><span class="p">){</span>
 					<span class="nx">$$</span><span class="p">(</span><span class="nx">pik</span><span class="p">.</span><span class="nx">slides</span><span class="p">[</span><span class="nx">slide</span><span class="p">]).</span><span class="nx">fireEvent</span><span class="p">(</span><span class="s1">&#39;slidedeactivate&#39;</span><span class="p">);</span>
 				<span class="p">}</span>
@@ -45,6 +48,7 @@ current slide and the <code>slidechange</code> event on the window object</li>
 				<span class="nx">$$</span><span class="p">(</span><span class="nx">pik</span><span class="p">.</span><span class="nx">slides</span><span class="p">[</span><span class="nx">slide</span><span class="p">]).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;pik-current&#39;</span><span class="p">);</span>
 				<span class="nx">$$</span><span class="p">(</span><span class="nx">pik</span><span class="p">.</span><span class="nx">slides</span><span class="p">[</span><span class="nx">next</span><span class="p">]).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;pik-next&#39;</span><span class="p">);</span>
 				<span class="nx">$$</span><span class="p">(</span><span class="nx">pik</span><span class="p">.</span><span class="nx">slides</span><span class="p">[</span><span class="nx">prev</span><span class="p">]).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;pik-prev&#39;</span><span class="p">);</span>
+				<span class="nx">$$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;pik-body-slide-&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">slide</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
 				<span class="k">if</span><span class="p">(</span><span class="nx">fire_events</span><span class="p">){</span>
 					<span class="nx">$$</span><span class="p">(</span><span class="nx">pik</span><span class="p">.</span><span class="nx">slides</span><span class="p">[</span><span class="nx">slide</span><span class="p">]).</span><span class="nx">fireEvent</span><span class="p">(</span><span class="s1">&#39;slideactivate&#39;</span><span class="p">);</span>
 					<span class="nb">window</span><span class="p">.</span><span class="nx">fireEvent</span><span class="p">(</span><span class="s1">&#39;slidechange&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">slide</span><span class="p">]);</span>
