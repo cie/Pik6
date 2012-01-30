@@ -1,0 +1,120 @@
+/*
+ * Impress
+ * -------
+ * People were complaining that Pik6 didn't look quite as good as impress.js
+ * (http://bartaz.github.com/impress.js/). This style shows how this can be helped. It
+ * currenty only covers up to 13 slides, but that can easily changed.
+ */
+
+/* Setup */
+html, body {
+	overflow: hidden;
+}
+#Pik-presentation-container {
+	-moz-transition: -moz-transform 1s;
+	-moz-transform-origin: 50% 50%;
+}
+.pik-slide {
+	visibility: visible;
+	opacity: 0.5;
+	-moz-transform-origin: 50% 50%;
+}
+.pik-slide.pik-current {
+	visibility: visible;
+	opacity: 1;
+	z-index: 42;
+}
+
+/* Slide 1 */
+.pik-slide:nth-child(1) {
+	top: -100%;
+	left: -100%;
+}
+.pik-body-slide-1 #Pik-presentation-container {
+	-moz-transform: translate(100%, 100%);
+}
+
+/* Slide 2... you get the idea */
+.pik-slide:nth-child(2) {
+	top: -100%;
+	-moz-transform: rotate(90deg);
+}
+.pik-body-slide-2 #Pik-presentation-container {
+	-moz-transform: rotate(-90deg) translate(0%, 100%);
+}
+
+.pik-slide:nth-child(3) {
+	top: -50%;
+	left: -25%;
+	-moz-transform: rotate(0deg) scale(0.5);
+}
+.pik-body-slide-3 #Pik-presentation-container {
+	-moz-transform: rotate(0deg) scale(2.0) translate(25%, 50%);
+}
+
+.pik-slide:nth-child(4) {
+	top: 5%;
+}
+.pik-body-slide-4 #Pik-presentation-container {
+	-moz-transform: translate(0, -5%);
+}
+
+.pik-slide:nth-child(5) {
+	top: 50%;
+	left: -200%;
+	-moz-transform: scale(4.0);
+}
+.pik-body-slide-5 #Pik-presentation-container {
+	-moz-transform: scale(0.25) translate(200%, -50%);
+}
+
+.pik-slide:nth-child(6) {
+	top: 90%;
+	left: -35%;
+	-moz-transform: rotate(90deg);
+}
+.pik-body-slide-6 #Pik-presentation-container {
+	-moz-transform: rotate(-90deg) translate(35%, -90%);
+}
+
+
+
+.pik-slide:nth-child(6) ~ .pik-slide {
+	display: none;
+}
+
+
+
+.pik-body-slide-4 {
+
+}
+.pik-body-slide-5 {
+
+}
+.pik-body-slide-6 {
+
+}
+.pik-body-slide-7 {
+
+}
+.pik-body-slide-8 {
+
+}
+.pik-body-slide-9 {
+
+}
+.pik-body-slide-10 {
+
+}
+.pik-body-slide-11 {
+
+}
+.pik-body-slide-12 {
+
+}
+.pik-body-slide-13 {
+
+}
+.pik-body-slide-14 {
+
+}
