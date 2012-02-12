@@ -108,3 +108,26 @@ kbd {
 .atv { color: #090; }
 
 } /* End "@media screen, projection" */
+
+
+@media print {
+
+body {
+	font-family: Georgia, "Times New Roman", serif;
+}
+h1 {
+	color: #000;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+h2 {
+	font-style: italic;
+	color: #AE1215;
+	font-size: 1.5em;
+}
+a {
+	color: #AE1215 !important;
+}
+
+} /* End "@media print" */
