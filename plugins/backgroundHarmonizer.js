@@ -9,8 +9,13 @@ if(typeof pik !== 'undefined'){
 
 window.addEvent('load', function(){
 
+// Get the element the background color is applied to and save it's original state
 var background_element = $$('body'),
     original_background_color  = background_element.getStyle('background-color');
+
+// When a slide activates, check if it has a background color defined. In that case,
+// apply the color to the background element. Otherwise apply the original background
+// color.
 pik.slides.each(function(slide){
 	slide.addEvent('slideactivate', function(){
 		var background_color = this.getStyle('background-color');
