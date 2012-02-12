@@ -8,6 +8,8 @@
  * presentations without modifications.
  */
 
+@media screen, projection {
+
 /* Setup */
 html, body {
 	overflow: hidden;
@@ -160,3 +162,5 @@ html, body {
 .pik-body-slide-14 #Pik-presentation-container {
 	-moz-transform: rotate(90deg) translate(30%, 190%);
 }
+
+} /* End "@media screen, projection" */

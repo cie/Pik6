@@ -3,6 +3,8 @@
  * Includes styles for syntax highlighting using google-code-prettify
 */
 
+@media screen, projection {
+
 body {
 	font-family: Georgia, "Times New Roman", serif;
 	line-height: 1.6;
@@ -186,3 +188,5 @@ pre.center {
 .pun, .opn, .clo { color: #CCC; }
 .atn { color: #F0F; }
 .atv { color: #0F0; }
+
+} /* End "@media screen, projection" */

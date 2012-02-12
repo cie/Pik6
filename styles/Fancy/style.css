@@ -8,6 +8,8 @@
  * with the default style.
  */
 
+@media screen, projection {
+
 /* For general font and color styles */
 body {
 	font-size: 0.9em;
@@ -98,3 +100,5 @@ body {
 }
 
 /* Fuck vendor prefixes. */
+
+} /* End "@media screen, projection" */
