@@ -9,7 +9,6 @@ window.addEvent('load', function(){
 	pik.slides.each(function(slide){
 		slide.addEvent('slideactivate', function(){
 			var background_color = this.getStyle('background-color');
-			console.log(background_color);
 			if(background_color !== 'transparent'){
 				background_element.setStyle('background-color', background_color);
 			}
