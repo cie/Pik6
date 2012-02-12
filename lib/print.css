@@ -1,0 +1,19 @@
+/* Basic print style sheet */
+html {
+	font-family: Arial, sans-serif;
+	font-size: 11pt;
+	line-height: 1.4;
+}
+body {
+	background: white;
+	color: black;
+}
+a {
+	color: blue !important;
+}
+iframe {
+	display: none;
+}
+h2, h3, h4, ul, ol, p, table {
+	page-break-inside: avoid;
+}
