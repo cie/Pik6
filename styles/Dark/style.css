@@ -99,10 +99,10 @@ s, .s, del {
 	text-decoration: line-through;
 }
 .shadow {
-	box-shadow: 0 0 20px #999;
+	box-shadow: 0 0 1.5em #999;
 }
 .shadowdark {
-	box-shadow: 0 0 20px #000;
+	box-shadow: 0 0 1.5em #000;
 }
 input, button {
 	font-size: inherit;
