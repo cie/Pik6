@@ -1,22 +1,45 @@
-/* Basic print style sheet */
+/* Super basic print style sheet */
 html {
 	font-family: Arial, sans-serif;
-	font-size: 11pt;
-	line-height: 1.4;
-}
-body {
+	line-height: 1.5;
 	background: white;
 	color: black;
 }
-a {
-	color: blue !important;
+.center {
+	text-align: center;
 }
-iframe {
-	display: none;
-}
-h2, h3, h4, ul, ol, p, table {
+pre, pre.center {
+	text-align: left;
+	font-size: inherit !important;
 	page-break-inside: avoid;
 }
-.noprint {
-	display: none;
+a {
+	color: blue;
+}
+
+/* Emulate original slide layout for landscape format */
+@media print and (orientation:landscape){
+	body {
+		font-size: 17pt;
+	}
+	pre, pre.center {
+		font-size: 14pt !important;
+		line-height: 1.3;
+	}
+	.pik-slide {
+		page-break-after: always;
+	}
+}
+
+/* Extra padding for portrait format; improves slides without headlines */
+@media print and (orientation:portrait){
+	.pik-slide {
+		padding-bottom: 2em;
+	}
+}
+
+/* No printing and no page breaks for these guys */
+.noprint, input, textarea, iframe, button {
+	display: none !important;
+	page-break-after: auto !important;
 }
