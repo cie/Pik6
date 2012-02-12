@@ -6,6 +6,7 @@
 	<meta http-equiv="expires" content="0">
 	<script src="../../lib/pik.js"></script>
 	<link href="../../styles/Default/style.css" rel="stylesheet">
+	<link href="../../styles/Fancy/style.css" rel="stylesheet">
 	<script src="google-code-prettify/prettify.js"></script>
 	<base target="_blank">
 </head>
@@ -117,21 +118,15 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 class <code>pik-current</code> are invisible by default
 <li>By changing the behavior of this class and the classes <code>pik-next</code> and
 <code>pik-prev</code> it is possible to create slide transitions
-<li>Try it! <a id="MakeFancy">Add a stylesheet with transitions</a> (<a id="RevertFancy">remove here</a>)
+<li>Try it! <a id="MakeFancy">Add transitions</a> (<a id="RevertFancy">remove here</a>)
 </ul>
 </div>
 <script>
 $('MakeFancy').addEvent('click', function(){
-	if($('FancyStyles') === null){
-		new Element('link', {
-			'rel': 'stylesheet',
-			'href': '../../styles/Fancy/style.css',
-			'id': 'FancyStyles'
-		}).inject($$('head')[0]);
-	}
+	$$('body').addClass('fancy');
 });
 $('RevertFancy').addEvent('click', function(){
-	$$('#FancyStyles').destroy();
+	$$('body').removeClass('fancy');
 });
 </script>
 
