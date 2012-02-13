@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to PIK6</title>
+	<title>Welcome to PIK6 (1.1.0)</title>
 	<meta http-equiv="expires" content="0">
 	<script src="../../lib/pik.js"></script>
 	<link href="../../styles/Default/style.css" rel="stylesheet">
@@ -52,8 +52,10 @@
 <ul>
 <li>Requires a modern web browser
 <li>Requires a web server to run from
-<li>Shares all drawbacks common to HTML slides (no GUI to create presentations, no PDF export, images hard to use)
+<li>Shares all drawbacks common to HTML slides (no GUI to create presentations, no PDF export*, images hard to use)
 </ul>
+<p>
+<small>* PIK6 handles printing somewhat well, so PDF export using Chrome's "print to PDF" function <em>is</em> possible</small>
 </div>
 
 <div class="pik-slide">
@@ -77,7 +79,7 @@
 <div class="pik-slide">
 <h2>Presenter mode</h2>
 <ul>
-<li>Open <code>presenter.html</code> in a new window to use the presenter mode.
+<li>Open <code>presenter.html</code> in a new window (use the control panel) to use the presenter mode.
 <li>The presenter mode offers more control elements, displays a timer and lets you see the
 currently displayed slide and which slide comes next
 <li>Requires a browser that supports <a href="http://www.w3.org/TR/workers/">Shared Workers</a> (Chrome 8+ or Opera 11+)
@@ -105,7 +107,7 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 	<ul>
 		<li><em>Default</em> (used in this presentation)
 		<li><em>Dark</em> (simple white text on a dark backgroud)
-		<li><em>Fancy</em> and <em>Impress</em> (demonstrates slide transitions, to be used together with Default)
+		<li><em>Fancy</em> and <em>Impress</em> (demonstrate slide transitions, to be used together with <em>Default</em>)
 	</ul>
 <li>Use <code>styles/Template/style.css</code> as a starting point for your own style
 <li><a href="http://leaverou.github.com/prefixfree/">-prefix-free</a> (included by default) takes care of all vendor prefixes, so you don't have to.
@@ -184,11 +186,17 @@ window.addEvent('domready', function(){
 <div class="pik-slide">
 <h2>Plugins</h2>
 <ul>
-<li>Plugins are simple scripts that can be added to a presentation
+<li>Plugins are simple scripts that can be used to add features a presentation
 <li><em>backgroundHarmonizer.js</em> keeps the presentation document's background color in sync with the current slide's background color.
 <li><em>inputProtector.js</em> prevents Pik6 from interpreting arrow key events emitted on input elements in the presentation as presentation commands
 <li><em>printHandout.js</em> enables a handout mode for printing, where only slides with the class <code>handout</code> are printed
 </ul>
+</div>
+
+
+<div class="pik-slide">
+<h2>Changelog</h2>
+<iframe src="../../changelog.md" class=""></iframe>
 </div>
 
 

@@ -16,7 +16,7 @@ body {
 }
 
 /* Typography */
-h1, h2, p, ul, ol, p, pre {
+h1, h2, p, ul, ol, p, pre, iframe {
 	margin-left: 4%;
 	margin-right: 4%
 }
@@ -55,6 +55,11 @@ code {
 	border: 1px solid rgb(240, 240, 240);
 	padding: 0.1em;
 }
+iframe {
+	border: none;
+	width: 92%;
+	height: 70%;
+}
 a, a:link, a:visited {
 	cursor: pointer;
 	color: #AE1215;
@@ -67,6 +72,11 @@ a:visited {
 a:hover, a:active {
 	color: #000;
 	border-bottom: 0.1em solid transparent;
+}
+small {
+	font-size: 0.6em;
+	font-style: italic;
+	display: block;
 }
 kbd {
 	font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;

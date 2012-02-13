@@ -15,6 +15,4 @@ Changelog
 
   * Semi-official, semi-inital release
 
-
-
 [1]: http://leaverou.github.com/prefixfree/
