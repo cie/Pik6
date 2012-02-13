@@ -118,8 +118,9 @@ textarea {
 
 /* Tables */
 table {
+	display: table;
+	width: 95%;
 	border-collapse: collapse;
-	margin: 0 auto;
 }
 td, th {
 	background: #FFF;

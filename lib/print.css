@@ -16,6 +16,9 @@ pre, pre.center {
 a {
 	color: blue;
 }
+.pik-slide {
+	clear: both;
+}
 
 /* Emulate original slide layout for landscape format */
 @media print and (orientation:landscape){
@@ -39,7 +42,7 @@ a {
 }
 
 /* No printing and no page breaks for these guys */
-.noprint, input, textarea, iframe, button {
+:empty, .noprint, input, textarea, iframe, button {
 	display: none !important;
 	page-break-after: auto !important;
 }
