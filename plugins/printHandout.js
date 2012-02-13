@@ -12,7 +12,7 @@ var framed     = (window.top !== window.self),
 
 if(!framed && print_hash === '#print'){
 
-	// Important: activate before the load event to intercept the automatic printing
+	// Important: activate *before* the load event to intercept the automatic printing
 	window.addEvent('domready', function(){
 		if(window.confirm('Print only handout slides?')){
 			$$('.pik-slide:not(.handout)').setStyle('display', 'none');
