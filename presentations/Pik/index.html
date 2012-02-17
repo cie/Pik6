@@ -86,6 +86,7 @@ currently displayed slide and which slide comes next
 </ul>
 </div>
 
+
 <div class="pik-slide">
 <h2>Building presentations</h2>
 <pre class="prettyprint">&lt;!-- /presentations/Foo/bar.html --&gt;
@@ -97,6 +98,23 @@ currently displayed slide and which slide comes next
 &lt;/div&gt;</pre>
 <p>
 You can use <code>presentations/Template/index.html</code> as a starting point.
+</div>
+
+<div class="pik-slide">
+<h2>Notes</h2>
+<ul>
+<li>Notes can be added using an element with the class <code>pik-notes</code> for each slide
+<li>Notes are invisible in the presentation, but are shown in the presenter view
+<li>Look at this slide for an example
+</ul>
+<div class="pik-notes">
+	<h3>Use all the tags you like!</h3>
+	<ul>
+		<li>No limitations! Use <a href="http://www.google.com">links</a>, headlines and
+		    everything else!
+		<li>Notes won't be printed
+	</ul>
+</div>
 </div>
 
 <div class="pik-slide">
@@ -113,6 +131,7 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 <li><a href="http://leaverou.github.com/prefixfree/">-prefix-free</a> (included by default) takes care of all vendor prefixes, so you don't have to.
 </ul>
 </div>
+
 
 <div class="pik-slide">
 <h2>Slide transitions</h2>
@@ -143,6 +162,7 @@ $('RevertFancy').addEvent('click', function(){
 </ul>
 </div>
 
+
 <div class="pik-slide">
 <h2>Simple programming example</h2>
 <pre class="prettyprint">window.addEvent('domready', function(){
@@ -156,6 +176,7 @@ $('RevertFancy').addEvent('click', function(){
     });
 });</pre>
 </div>
+
 
 <div class="pik-slide center noprint" id="Demo">
 	<div class="center" style="width:640px; height:480px; background:url(loader.gif) center center no-repeat;"></div>
@@ -210,6 +231,7 @@ window.addEvent('domready', function(){
 <li><a href="mailto:peter@peterkroener.de">Contact me</a>
 </ul>
 </div>
+
 
 </div> <!-- End #Pik-presentation-container -->
 </body>

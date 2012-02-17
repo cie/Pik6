@@ -4,6 +4,7 @@ Changelog
 1.1.0
 -----
 
+  * Added notes
   * Added some print functionality
   * Added plugins backgroundHarominzer, printHandout and inputProtector
   * Added "Impress" style

@@ -88,3 +88,16 @@ a:hover, a:active {
 	color: #000;
 	border-bottom: 1px solid transparent;
 }
+
+/* Notes */
+#Pik-notes {
+	clear: both;
+	color: #CCC;
+	padding: 0.25em 0;
+}
+#Pik-notes h1 {
+	font-size: 1.75em;
+}
+#Pik-notes.pik-active {
+	color: inherit;
+}
