@@ -36,7 +36,7 @@ a {
 
 /* Extra padding for portrait format; improves slides without headlines */
 @media print and (orientation:portrait){
-	.pik-slide {
+	.pik-slide:not(.noprint) {
 		padding-bottom: 2em;
 	}
 }
