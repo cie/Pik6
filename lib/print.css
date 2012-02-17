@@ -42,7 +42,7 @@ a {
 }
 
 /* No printing and no page breaks for these guys */
-:empty, .noprint, .pik-notes, input, textarea, iframe, button {
+:empty, .pik-noprint, .pik-notes, input, textarea, iframe, button {
 	display: none !important;
 	page-break-after: auto !important;
 }
