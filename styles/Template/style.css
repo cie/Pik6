@@ -24,3 +24,8 @@ body {
 }
 
 } /* End "@media screen, projection" */
+
+
+/* Don't forget print styles! */
+@media print {
+} /* End "@media print" */

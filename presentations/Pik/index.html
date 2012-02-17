@@ -7,8 +7,23 @@
 	<script src="../../lib/pik.js"></script>
 	<link href="../../styles/Default/style.css" rel="stylesheet">
 	<link href="../../styles/Fancy/style.css" rel="stylesheet">
+	<link href="../../styles/Impress/style.css" rel="stylesheet">
 	<script src="google-code-prettify/prettify.js"></script>
 	<base target="_blank">
+	<style>
+		/* Fine tuning the Rickroll */
+		#Demo iframe {
+			border: none;
+			width: 70%;
+			height: 70%;
+			position: absolute;
+			top: 15%;
+			left: 15%;
+			right: 15%;
+			bottom: 15%;
+			z-index: 1337;
+		}
+	</style>
 </head>
 <body onload="prettyPrint()">
 <div id="Pik-hide"></div>             <!-- Important - do not remove or rename! -->
@@ -136,15 +151,22 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 class <code>pik-current</code> are invisible by default
 <li>By changing the behavior of this class and the classes <code>pik-next</code> and
 <code>pik-prev</code> it is possible to create slide transitions
-<li>Try it! <a id="MakeFancy">Add transitions</a> (<a id="RevertFancy">remove here</a>)
+<li>Try it! <a id="MakeFancy">Add</a> <a id="MakeImpressive">transitions</a>
+(<a id="RevertTransitions">remove here</a>)
 </ul>
 </div>
 <script>
 $('MakeFancy').addEvent('click', function(){
-	$$('body').addClass('fancy');
+	$$('html').addClass('fancy').removeClass('impress');
+	$$('body').addClass('fancy').removeClass('impress');
 });
-$('RevertFancy').addEvent('click', function(){
-	$$('body').removeClass('fancy');
+$('MakeImpressive').addEvent('click', function(){
+	$$('html').addClass('impress').removeClass('fancy');
+	$$('body').addClass('impress').removeClass('fancy');
+});
+$('RevertTransitions').addEvent('click', function(){
+	$$('html').removeClass('fancy').removeClass('impress');
+	$$('body').removeClass('fancy').removeClass('impress');
 });
 </script>
 
@@ -207,7 +229,7 @@ window.addEvent('domready', function(){
 
 <div class="pik-slide">
 <h2>Changelog</h2>
-<iframe src="../../changelog.md" class=""></iframe>
+<iframe src="../../changelog.md" style="display: block; width: 100%; height: 60%"></iframe>
 </div>
 
 <div class="pik-slide">
