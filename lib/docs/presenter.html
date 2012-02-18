@@ -96,7 +96,7 @@ colliding, detach and re-attach the resize listener when dragging</p>           
 		<span class="nx">main_resize</span><span class="p">.</span><span class="nx">attach</span><span class="p">();</span>
 	<span class="p">}</span>
 <span class="p">});</span></pre></div>             </td>           </tr>                               <tr id="section-16">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-16">&#182;</a>               </div>               <p>Same story for the preview frame</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">var</span> <span class="nx">preview_resize</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;Pik-frame-preview&#39;</span><span class="p">).</span><span class="nx">makeResizable</span><span class="p">({</span>
-	<span class="nx">handle</span><span class="o">:</span> <span class="s1">&#39;Pik-frame-resize-handle&#39;</span>
+	<span class="nx">handle</span><span class="o">:</span> <span class="s1">&#39;Pik-frame-preview-resize-handle&#39;</span>
 <span class="p">});</span>
 <span class="kd">var</span> <span class="nx">preview_drag</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Drag</span><span class="p">(</span><span class="s1">&#39;Pik-frame-preview&#39;</span><span class="p">,</span> <span class="p">{</span>
 	<span class="nx">handle</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;Pik-frame-preview-handle&#39;</span><span class="p">)</span>
