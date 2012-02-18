@@ -105,6 +105,11 @@ kbd {
 	vertical-align: middle;
 }
 
+} /* End "@media screen, projection" */
+
+
+@media all {
+
 /* Code highlighting */
 .pln { color: #000; }
 .str { color: #090; }
@@ -117,7 +122,7 @@ kbd {
 .atn { color: #404; }
 .atv { color: #090; }
 
-} /* End "@media screen, projection" */
+} /* End "@media all" */
 
 
 @media print {
