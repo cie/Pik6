@@ -57,7 +57,7 @@ iframe:hover {
 	right: 0;
 	height: 24px;
 	width: 24px;
-	z-index: 99999;
+	z-index: 1337;
 	cursor: se-resize;
 	transform: translate(12px, 12px) rotate(45deg);
 }
@@ -119,7 +119,6 @@ iframe:hover {
 	text-align: right;
 	float: right;
 	padding: 4px 16px 4px 28px;
-	z-index: 9001;
 }
 #Pik-timecontainer-handle {
 	top: 0;
