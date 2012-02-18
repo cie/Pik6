@@ -11,6 +11,16 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+a, a:link, a:visited {
+	color: #000;
+	border-bottom: 1px solid #000;
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #000;
+	border-bottom: 1px solid transparent;
+}
 #Pik-wrapper {
 	position: relative;
 	width: 960px;
@@ -30,7 +40,7 @@ iframe:hover {
 	z-index: 1337;
 }
 
-/* Handles */
+/* Handles and dragged elements */
 .pik-handle {
 	position: absolute;
 	background: #EEE;
@@ -44,6 +54,9 @@ iframe:hover {
 	transition-property: background, box-shadow;
 	transition-duration: 700ms;
 	background: rgba(255, 255, 255, 0);
+}
+.pik-handled.pik-dragging {
+	z-index: 9999 !important;
 }
 .pik-handled:hover {
 	background: #FFF;
@@ -81,11 +94,13 @@ iframe:hover {
 
 /* Timer and slide counter */
 #Pik-timecontainer {
-	font-size: 18px;
-	text-align: right;
 	position: absolute;
 	top: 32px;
-	right: 0;
+	left: 700px;
+	width: 260px;
+	font-size: 18px;
+	text-align: right;
+	float: right;
 	padding: 4px 16px;
 	z-index: 9001;
 }
@@ -106,36 +121,40 @@ iframe:hover {
 }
 
 /* Slide controls */
+#Pik-framecontrols {
+	position: absolute;
+	top: 440px;
+	left: 680px;
+	width: 280px;
+	text-align: right;
+	margin: 0;
+	padding: 8px 16px;
+}
+#Pik-framecontrols-handle {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 8px;
+}
 #Pik-slideselect {
 	font-size: inherit;
-	width: 296px;
-	position: absolute;
-	top: 432px;
-	right: 0;
-}
-#Pik-framecontrols {
-	text-align: right;
-	position: absolute;
-	top: 480px;
-	right: 0;
-	margin: 0;
-}
-a, a:link, a:visited {
-	color: #000;
-	border-bottom: 1px solid #000;
-	cursor: pointer;
-	text-decoration: none;
-}
-a:hover, a:active {
-	color: #000;
-	border-bottom: 1px solid transparent;
+	margin: 0 0 16px 16px;
 }
 
 /* Notes */
 #Pik-notes {
+	position: relative;
+	top: 16px;
 	clear: both;
 	color: #CCC;
-	padding: 0.25em 0;
+	padding: 0.25em 4px;
+}
+#Pik-notes-handle {
+	height: 8px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 #Pik-notes h1 {
 	font-size: 1.75em;

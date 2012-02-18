@@ -29,13 +29,15 @@ window.addEvent('load', function(){
 		<div id="Pik-frame-preview-handle" class="pik-handle"></div>
 		<iframe src="lib/start.html"></iframe>
 	</div>
-	<select id="Pik-slideselect"></select>
-	<div id="Pik-framecontrols">
+	<div id="Pik-framecontrols" class="pik-handled">
+		<div id="Pik-framecontrols-handle" class="pik-handle"></div>
+		<select id="Pik-slideselect"></select><br>
 		<a id="Pik-framecontrols-reload" title="Reload the current presentation">Reload</a>
 		|
 		<a id="Pik-framecontrols-browse" href="presentations" target="Mainframe" title="Browse the presentations directory">Browse</a>
 	</div>
-	<div id="Pik-notes">
+	<div id="Pik-notes" class="pik-handled">
+		<div id="Pik-notes-handle" class="pik-handle"></div>
 		<h1>Notes</h1>
 		<div id="Pik-notes-content"></div>
 	</div>
