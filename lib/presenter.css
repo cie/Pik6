@@ -36,9 +36,6 @@ iframe {
 	position: relative;
 	z-index: 1;
 }
-iframe:hover {
-	z-index: 1337;
-}
 
 /* Handles and dragged elements */
 .pik-handle {
@@ -93,6 +90,8 @@ iframe:hover {
 }
 #Pik-frame {
 	position: relative;
+	top: 0;
+	left: 0;
 	float: left;
 	width: 640px;
 	height: 480px;
@@ -100,7 +99,7 @@ iframe:hover {
 #Pik-frame-preview {
 	position: absolute;
 	top: 104px;
-	right: 0;
+	left: 550px;
 	width: 410px;
 	height: 308px;
 	z-index: 1338;
@@ -159,11 +158,13 @@ iframe:hover {
 
 /* Notes */
 #Pik-notes {
-	position: relative;
-	top: 16px;
+	position: absolute;
+	top: 544px;
+	left: 0;
+	width: 100%;
 	clear: both;
 	color: #CCC;
-	padding: 0.25em 4px;
+	padding: 8px 16px;
 }
 #Pik-notes-handle {
 	height: 8px;
