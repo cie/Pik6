@@ -47,6 +47,23 @@ iframe:hover {
 	cursor: move;
 	transition: background 700ms;
 }
+.pik-resize-handle {
+	border-left: 12px solid #EEE;
+	border-top: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 24px;
+	width: 24px;
+	z-index: 99999;
+	cursor: se-resize;
+	transform: translate(12px, 12px) rotate(45deg);
+}
+:hover > .pik-resize-handle {
+	border-left: 12px solid #CCC;
+}
 :hover > .pik-handle {
 	background: #CCC;
 }
@@ -66,13 +83,13 @@ iframe:hover {
 /* Frames */
 #Pik-frame, #Pik-frame-preview {
 	box-shadow: 0 0 64px -16px #111;
-	padding-top: 8px;
+	padding-top: 12px;
 }
 #Pik-frame-handle, #Pik-frame-preview-handle {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 8px;
+	height: 12px;
 }
 #Pik-frame {
 	position: relative;
@@ -96,19 +113,19 @@ iframe:hover {
 #Pik-timecontainer {
 	position: absolute;
 	top: 32px;
-	left: 700px;
-	width: 260px;
+	left: 670px;
+	width: 290px;
 	font-size: 18px;
 	text-align: right;
 	float: right;
-	padding: 4px 16px;
+	padding: 4px 16px 4px 28px;
 	z-index: 9001;
 }
 #Pik-timecontainer-handle {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	width: 8px;
+	width: 12px;
 }
 #Pik-elapsed {
 	font-weight: bold;
@@ -124,21 +141,21 @@ iframe:hover {
 #Pik-framecontrols {
 	position: absolute;
 	top: 440px;
-	left: 680px;
-	width: 280px;
+	left: 670px;
+	width: 290px;
 	text-align: right;
 	margin: 0;
-	padding: 8px 16px;
+	padding: 8px 16px 8px 28px;
 }
 #Pik-framecontrols-handle {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	width: 8px;
+	width: 12px;
 }
 #Pik-slideselect {
 	font-size: inherit;
-	margin: 0 0 16px 16px;
+	margin: 0 0 16px 8px;
 }
 
 /* Notes */
