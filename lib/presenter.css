@@ -1,4 +1,7 @@
 /* Basics */
+* {
+	box-sizing: border-box;
+}
 html, body {
 	overflow: hidden;
 	font-size: 15px;
@@ -7,76 +10,6 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-}
-#Pik-wrapper {
-	position: relative;
-	width: 960px;
-	margin: 0 auto;
-}
-
-/* Iframes */
-iframe {
-	background: #FFF;
-	border: 4px solid #FFF;
-	box-shadow: 0 0 64px -12px #000;
-	display: block;
-	z-index: 1;
-	padding: 0;
-	margin: 32px 0 0 0;
-}
-iframe:hover {
-	z-index: 1337;
-}
-#Pik-frame {
-	position: relative;
-	float: left;
-	width: 640px;
-	height: 480px;
-}
-#Pik-frame-preview {
-	position: absolute;
-	top: 64px;
-	right: 0;
-	width: 410px;
-	height: 308px;
-}
-
-/* Timer and slide counter */
-#Pik-timecontainer {
-	font-size: 21px;
-	color: #EEE;
-	text-align: right;
-	position: absolute;
-	top: 32px;
-	right: 0;
-}
-#Pik-timecontainer span {
-	color: #000;
-}
-#Pik-elapsed {
-	font-weight: bold;
-}
-#Pik-framecontrols-slidecount {
-	font-size: 40px;
-	font-weight: bold;
-	float: left;
-	margin-right: 32px
-}
-
-/* Slide controls */
-#Pik-slideselect {
-	font-size: inherit;
-	width: 296px;
-	position: absolute;
-	top: 432px;
-	right: 0;
-}
-#Pik-framecontrols {
-	text-align: right;
-	position: absolute;
-	top: 480px;
-	right: 0;
-	margin: 0;
 }
 a, a:link, a:visited {
 	color: #000;
@@ -88,12 +21,157 @@ a:hover, a:active {
 	color: #000;
 	border-bottom: 1px solid transparent;
 }
+#Pik-wrapper {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	padding: 32px 0 0 0;
+}
+iframe {
+	background: #FFF;
+	border: 4px solid #FFF;
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+/* Handles and dragged elements */
+.pik-handle {
+	position: absolute;
+	background: #EEE;
+	cursor: move;
+	transition: background 700ms;
+}
+.pik-resize-handle {
+	border-left: 12px solid #EEE;
+	border-top: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 24px;
+	width: 24px;
+	z-index: 1337;
+	cursor: se-resize;
+	transform: translate(12px, 12px) rotate(45deg);
+}
+:hover > .pik-resize-handle {
+	border-left: 12px solid #CCC;
+}
+:hover > .pik-handle {
+	background: #CCC;
+}
+.pik-handled {
+	transition-property: background, box-shadow;
+	transition-duration: 700ms;
+	background: rgba(255, 255, 255, 0);
+}
+.pik-handled.pik-dragging {
+	z-index: 9999 !important;
+}
+.pik-handled:hover {
+	background: #FFF;
+	box-shadow: 0 0 96px -16px #111 !important;
+}
+
+/* Frames */
+#Pik-frame, #Pik-frame-preview {
+	box-shadow: 0 0 64px -16px #111;
+	padding-top: 12px;
+}
+#Pik-frame-handle, #Pik-frame-preview-handle {
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 12px;
+}
+#Pik-frame {
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 640px;
+	height: 480px;
+}
+#Pik-frame-preview {
+	position: absolute;
+	top: 104px;
+	left: 550px;
+	width: 410px;
+	height: 308px;
+	z-index: 1338;
+}
+#Pik-frame:hover {
+	z-index: 1339;
+}
+
+/* Timer and slide counter */
+#Pik-timecontainer {
+	position: absolute;
+	top: 32px;
+	left: 670px;
+	width: 290px;
+	font-size: 18px;
+	text-align: right;
+	float: right;
+	padding: 4px 16px 4px 28px;
+}
+#Pik-timecontainer-handle {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 12px;
+}
+#Pik-elapsed {
+	font-weight: bold;
+}
+#Pik-framecontrols-slidecount {
+	font-size: 38px;
+	font-weight: bold;
+	float: left;
+	margin-right: 32px
+}
+
+/* Slide controls */
+#Pik-framecontrols {
+	position: absolute;
+	top: 440px;
+	left: 670px;
+	width: 290px;
+	text-align: right;
+	margin: 0;
+	padding: 8px 16px 8px 28px;
+}
+#Pik-framecontrols-handle {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 12px;
+}
+#Pik-slideselect {
+	font-size: inherit;
+	margin: 0 0 16px 8px;
+}
 
 /* Notes */
 #Pik-notes {
+	position: absolute;
+	top: 544px;
+	left: 0;
+	width: 100%;
 	clear: both;
 	color: #CCC;
-	padding: 0.25em 0;
+	padding: 8px 16px;
+}
+#Pik-notes-handle {
+	height: 8px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 #Pik-notes h1 {
 	font-size: 1.75em;
