@@ -136,8 +136,8 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 <li>Styles includes in PIK6:
 	<ul>
 		<li><em>Default</em> (used in this presentation)
+		<li><em>Lime</em> (green text, white backgroud)
 		<li><em>Dark</em> (simple white text on a dark backgroud)
-		<li><em>Fancy</em> and <em>Impress</em> (demonstrate slide transitions, to be used together with <em>Default</em>)
 	</ul>
 <li>Use <code>styles/Template/style.css</code> as a starting point for your own style
 <li><a href="http://leaverou.github.com/prefixfree/">-prefix-free</a> (included by default) takes care of all vendor prefixes, so you don't have to.
@@ -151,8 +151,18 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 class <code>pik-current</code> are invisible by default
 <li>By changing the behavior of this class and the classes <code>pik-next</code> and
 <code>pik-prev</code> it is possible to create slide transitions
-<li>Try it! <a id="MakeFancy">Add</a> <a id="MakeImpressive">transitions</a>
-(<a id="RevertTransitions">remove here</a>)
+<li>The styles <em>Fancy</em> and <em>Impress</em> contain two examples of this; use
+them in addition to normal presentation styles to get fancy. See the next slide for
+examples.
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Slide transitions in action</h2>
+<ul>
+<li><a id="MakeFancy">Add fancy transitions</a>
+<li><a id="MakeImpressive">Add impressive transitions</a>
+<li><a id="RevertTransitions">Remove transitions</a>
 </ul>
 </div>
 <script>
@@ -227,17 +237,13 @@ window.addEvent('domready', function(){
 </ul>
 </div>
 
-<div class="pik-slide pik-noprint">
-<h2>Changelog</h2>
-<iframe src="../../changelog.md" style="display: block; width: 100%; height: 60%"></iframe>
-</div>
-
 <div class="pik-slide">
 <h2>Links</h2>
 <ul>
 <li><a href="https://github.com/SirPepe/Pik6">Github</a>
 (<a href="https://github.com/SirPepe/Pik6/issues">report bugs here!</a>)
 <li><a href="http://pik6.peterkroener.de/">Web site</a>
+<li><a href="../../changelog.md">Changelog</a>
 <li><a href="https://flattr.com/thing/b216317619d293466765285f678a0d9d">Support the project</a>
 <li><a href="mailto:peter@peterkroener.de">Contact me</a>
 </ul>

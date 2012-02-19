@@ -7,6 +7,8 @@
  * just in case. It requires a bit of CSS3 voodoo but works quite well in combination
  * with the default style. Include the file, add the class `fancy` to yout body element,
  * done! Note the lack of vendor prefixes; prefix-free takes care of that.
+ *
+ * To get the transitions to work, add the class `fancy` to your `<html>` element.
  */
 
 @media screen, projection {

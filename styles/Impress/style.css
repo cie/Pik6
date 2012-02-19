@@ -2,10 +2,13 @@
  * Impress
  * -------
  * People were complaining that Pik6 didn't look quite as good as impress.js
- * (http://bartaz.github.com/impress.js/). This style shows how this can be helped. It
+ * (http://bartaz.github.com/impress.js/). This style shows how this can be changed. It
  * currenty only covers up to 18 slides, but that can easily changed. Also it was written
  * with the Pik6 introduction presentation in mind; in may or may not work for other
  * presentations without modifications.
+ *
+ * To get the transitions to work, add the class `impress` to your `<html>` and `<body>`
+ * elements.
  */
 
 @media screen, projection {
@@ -149,27 +152,27 @@ html.impress, body.impress {
 	transform: scale(10.0) rotate(180deg) translate(-144%, 20%);
 }
 
-/* Example for a slide that's only visible when active */
 .impress .pik-slide:nth-of-type(14) {
-	visibility: hidden;
-}
-.impress .pik-slide:nth-of-type(14) {
-	transform: scale(2.0);
-}
-.impress .pik-body-slide-14 #Pik-presentation-container {
-	transform: scale(0.5);
-}
-.impress .pik-body-slide-14 .pik-slide:nth-of-type(14) {
-	visibility: visible;
-}
-
-.impress .pik-slide:nth-of-type(15) {
 	top: -190%;
 	left: -30%;
-	transform: rotate(-90deg);
+	transform: rotate(-90deg) scale(0.5);
+}
+.impress .pik-body-slide-14 #Pik-presentation-container {
+	transform: rotate(90deg) scale(2.0) translate(30%, 190%);
+}
+
+/* Example for a slide that's only visible when active */
+.impress .pik-slide:nth-of-type(15) {
+	visibility: hidden;
+}
+.impress .pik-slide:nth-of-type(15) {
+	transform: scale(2.0);
 }
 .impress .pik-body-slide-15 #Pik-presentation-container {
-	transform: rotate(90deg) translate(30%, 190%);
+	transform: scale(0.5);
+}
+.impress .pik-body-slide-15 .pik-slide:nth-of-type(15) {
+	visibility: visible;
 }
 
 .impress .pik-slide:nth-of-type(16) {
