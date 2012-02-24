@@ -76,6 +76,23 @@ small {
 	display: block;
 }
 
+/* Tables */
+table {
+	border-collapse: collapse;
+}
+th, td {
+	padding: 0.25em 0.55em;
+}
+th:not(:last-child), td:not(:last-child) {
+	border-right: 0.1em solid #000;
+}
+tr:first-child th {
+	border-bottom: 0.1em solid #000;
+}
+tr:not(:first-child) th:first-child {
+	text-align: right;
+}
+
 /* Extras */
 kbd {
 	font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;

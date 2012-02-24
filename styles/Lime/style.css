@@ -22,8 +22,7 @@ body {
 
 /* Typography */
 h1, h2, p, ul, ol, p, pre, iframe {
-	margin-left: 4%;
-	margin-right: 4%
+	margin: 1em 4%;
 }
 h1, h2 {
 	font-family: Ubuntu, Arial, sans-serif;
@@ -79,6 +78,26 @@ a:focus {
 	outline: 0;
 	color: #FFF;
 	background: #083;
+}
+small {
+	font-size: 0.5em;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+}
+th, td {
+	padding: 0.25em 0.55em;
+}
+th:not(:last-child), td:not(:last-child) {
+	border-right: 0.1em solid #000;
+}
+tr:first-child th {
+	border-bottom: 0.1em solid #000;
+}
+tr:not(:first-child) th:first-child {
+	text-align: right;
 }
 
 /* Extras */
