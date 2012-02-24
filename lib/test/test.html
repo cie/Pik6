@@ -1,19 +1,20 @@
 <!doctype html>
 <meta charset="utf-8">
 <title>Pik6 Worker Test</title>
-<script src="../mootools.js"></script>
-<script src="../Event.hashchange.js"></script>
+<script src="../mootools/mootools.js"></script>
+<script src="../mootools/Event.hashchange.js"></script>
 <script src="../frame.js"></script>
 <script src="../controls.js"></script>
 <script>
 	window.addEvent('load', function(){
-		pikInit('../../');
+		pik.init('../../');
 	});
 </script>
 
 <p>Slide: <input type="number" id="slide"> <input type="button" id="slideSend" value="Send"> <input type="button" id="slidePrev" value="&laquo;"> <input type="button" id="slideNext" value="&raquo;">
 <p>File: <input type="text" id="file"> <input type="button" id="fileSend" value="Send">
 <p>Hide: <input type="button" id="hideSend" value="Toggle"> Status: <span id="hide">Visible</span>
+<p><iframe id="Pik-frame" id="Mainframe" name="Mainframe" src="../../start.html"></iframe>
 
 <script>
 window.addEvent('pikSlide', function(now, prev){
