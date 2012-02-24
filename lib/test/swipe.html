@@ -1,14 +1,28 @@
 <!doctype html>
 <meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <title>Pik6 Swipe Test</title>
+<style>
+	* { box-sizing: border-box; }
+	html { margin: 0; padding: 0; }
+	body { height: 100%; width: 100%; background: blue; padding: 5%; margin: 0; }
+	iframe { height: 100%; width: 100%; background: white; }
+</style>
+
+<body>
+	<iframe src="swipe-iframe.html"></iframe>
+</body>
+
 <script src="../mootools/mootools.js"></script>
 <script src="../mootools/MooSwipe.js"></script>
 <script src="../controls.js"></script>
-<style>
-	* { box-sizing: border-box; }
-	html { height: 100%; width: 100%; background: white; padding: 10%; }
-	body { height: 100%; width: 100%; background: blue; }
-</style>
 <script>
-
+window.addEvents({
+	pikChangeSlideNext: function(){
+		$$('body').setStyle('background', 'red');
+	},
+	pikChangeSlidePrev: function(){
+		$$('body').setStyle('background', 'blue');
+	}
+});
 </script>
