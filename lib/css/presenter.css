@@ -152,6 +152,7 @@ iframe {
 	width: 12px;
 }
 #Pik-slideselect {
+	width: 100%;
 	font-size: inherit;
 	margin: 0 0 16px 8px;
 }
