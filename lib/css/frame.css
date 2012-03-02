@@ -44,3 +44,12 @@ html, body, iframe {
 #Pik-framecontrols a:not(:first-child)::before, #Pik-framecontrols span:not(:first-child)::before {
 	content: "  |  ";
 }
+
+/* Remote connection indicator */
+#Pik-remote-status {
+	opacity: 0.5;
+}
+#Pik-remote-status.pik-connected {
+	opacity: 1;
+	color: lime;
+}
