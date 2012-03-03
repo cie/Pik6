@@ -1,4 +1,7 @@
-/* Basics, iframe */
+/* Styles for the default frame (index.html) */
+* {
+	box-sizing: border-box;
+}
 html, body {
 	font-size: 15px;
 	font-family: Arial, sans-serif;
@@ -10,46 +13,4 @@ html, body, iframe {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-}
-
-/* Frame control panel */
-#Pik-framecontrols {
-	text-align: center;
-	z-index: 1337;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-#Pik-framecontrols > div {
-	opacity: 0;
-	-moz-transition: opacity 250ms ease-out;
-	-webkit-transition: opacity 250ms ease-out;
-	-ms-transition: opacity 250ms ease-out;
-	-o-transition: opacity 250ms ease-out;
-	-moz-transition: opacity 250ms ease-out;
-	display: inline-block;
-	background: #000;
-	color: #FFF;
-	padding: 0.5em 0.75em;
-}
-#Pik-framecontrols:hover div {
-	opacity: 1;
-}
-#Pik-framecontrols a {
-	cursor: pointer;
-	text-decoration: none;
-	color: #FFF !important;
-}
-#Pik-framecontrols a:not(:first-child)::before, #Pik-framecontrols span:not(:first-child)::before {
-	content: "  |  ";
-}
-
-/* Remote connection indicator */
-#Pik-remote-status {
-	opacity: 0.5;
-}
-#Pik-remote-status.pik-connected {
-	opacity: 1;
-	color: lime;
 }
