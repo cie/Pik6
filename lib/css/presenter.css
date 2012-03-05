@@ -21,21 +21,6 @@ a:hover, a:active {
 	border-bottom: 1px solid transparent;
 }
 
-/* Timer and slide count (all layouts) */
-#Pik-timecontainer {
-	font-size: 18px;
-	text-align: right;
-}
-#Pik-elapsed {
-	font-weight: bold;
-}
-#Pik-framecontrols-slidecount {
-	font-size: 38px;
-	font-weight: bold;
-	float: left;
-	margin-right: 32px
-}
-
 /* Slide controls (all layouts) */
 #Pik-slideselect {
 	width: 100%;
@@ -60,11 +45,30 @@ a:hover, a:active {
 }
 
 /* Mobile layout */
-@media all and (max-width: 800px){
+@media all and (max-width: 801px){
+
+	/* Elapsed time and slide number */
+	#Pik-timecontainer {
+		font-size: 2em;
+		font-weight: bold;
+	}
+	#Pik-framecontrols-slidecount {
+		float: left;
+	}
+	#Pik-elapsed {
+		float: right;
+	}
 
 	/* Slide controls */
 	#Pik-slideselect {
-		margin: 8px 0;
+		font-size: 1.5em;
+		margin: 8px 0 16px 0;
+		padding: 4px;
+	}
+	a {
+		font-size: 1.5em;
+		font-weight: bold;
+		margin: 8px 8px 0 0;
 	}
 
 	/* Wrapper and iframes */
@@ -73,10 +77,20 @@ a:hover, a:active {
 	}
 	iframe {
 		display: block;
-		height: 120px;
+		height: 200px !important;
 		width: 100%;
-		margin: 8px 0;
+		margin: 12px 0;
 		border: 1px solid black;
+	}
+
+	/* Hide the preview iframe; no room on a small display */
+	#Pik-frame-preview {
+		display: none;
+	}
+
+	/* Hide the clock; portable devices usually have their own clocks */
+	#Pik-time {
+		display: none;
 	}
 
 	/* Notes */
@@ -88,7 +102,7 @@ a:hover, a:active {
 
 
 /* Regular big screen layout */
-@media all and (min-width: 800px){
+@media all and (min-width: 801px){
 
 	/* Wrapper and iframes */
 	#Pik-wrapper {
@@ -179,6 +193,8 @@ a:hover, a:active {
 
 	/* Timer and slide counter */
 	#Pik-timecontainer {
+		font-size: 18px;
+		text-align: right;
 		position: absolute;
 		top: 32px;
 		left: 670px;
@@ -191,6 +207,15 @@ a:hover, a:active {
 		left: 0;
 		bottom: 0;
 		width: 12px;
+	}
+	#Pik-elapsed {
+		font-weight: bold;
+	}
+	#Pik-framecontrols-slidecount {
+		font-size: 38px;
+		font-weight: bold;
+		float: left;
+		margin-right: 32px
 	}
 
 	/* Slide controls */
