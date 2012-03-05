@@ -3,7 +3,6 @@
 	box-sizing: border-box;
 }
 html, body {
-	overflow: hidden;
 	font-size: 15px;
 	font-family: Arial, sans-serif;
 	width: 100%;
@@ -21,162 +20,240 @@ a:hover, a:active {
 	color: #000;
 	border-bottom: 1px solid transparent;
 }
-#Pik-wrapper {
-	position: relative;
-	width: 960px;
-	margin: 0 auto;
-	padding: 32px 0 0 0;
-}
-iframe {
-	background: #FFF;
-	border: 4px solid #FFF;
-	display: block;
-	height: 100%;
-	width: 100%;
-	position: relative;
-	z-index: 1;
-}
 
-/* Handles and dragged elements */
-.pik-handle {
-	position: absolute;
-	background: #EEE;
-	cursor: move;
-	transition: background 700ms;
-}
-.pik-resize-handle {
-	border-left: 12px solid #EEE;
-	border-top: 12px solid transparent;
-	border-right: 12px solid transparent;
-	border-bottom: 12px solid transparent;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	height: 24px;
-	width: 24px;
-	z-index: 1337;
-	cursor: se-resize;
-	transform: translate(12px, 12px) rotate(45deg);
-}
-:hover > .pik-resize-handle {
-	border-left: 12px solid #CCC;
-}
-:hover > .pik-handle {
-	background: #CCC;
-}
-.pik-handled {
-	transition-property: background, box-shadow;
-	transition-duration: 700ms;
-	background: rgba(255, 255, 255, 0);
-}
-.pik-handled.pik-dragging {
-	z-index: 9999 !important;
-}
-.pik-handled:hover {
-	background: #FFF;
-	box-shadow: 0 0 96px -16px #111 !important;
-}
-
-/* Frames */
-#Pik-frame, #Pik-frame-preview {
-	box-shadow: 0 0 64px -16px #111;
-	padding-top: 12px;
-}
-#Pik-frame-handle, #Pik-frame-preview-handle {
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 12px;
-}
-#Pik-frame {
-	position: relative;
-	top: 0;
-	left: 0;
-	float: left;
-	width: 640px;
-	height: 480px;
-}
-#Pik-frame-preview {
-	position: absolute;
-	top: 104px;
-	left: 550px;
-	width: 410px;
-	height: 308px;
-	z-index: 1338;
-}
-#Pik-frame:hover {
-	z-index: 1339;
-}
-
-/* Timer and slide counter */
-#Pik-timecontainer {
-	position: absolute;
-	top: 32px;
-	left: 670px;
-	width: 290px;
-	font-size: 18px;
-	text-align: right;
-	float: right;
-	padding: 4px 16px 4px 28px;
-}
-#Pik-timecontainer-handle {
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 12px;
-}
-#Pik-elapsed {
-	font-weight: bold;
-}
-#Pik-framecontrols-slidecount {
-	font-size: 38px;
-	font-weight: bold;
-	float: left;
-	margin-right: 32px
-}
-
-/* Slide controls */
-#Pik-framecontrols {
-	position: absolute;
-	top: 440px;
-	left: 670px;
-	width: 290px;
-	text-align: right;
-	margin: 0;
-	padding: 8px 16px 8px 28px;
-}
-#Pik-framecontrols-handle {
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 12px;
-}
+/* Slide controls (all layouts) */
 #Pik-slideselect {
 	width: 100%;
 	font-size: inherit;
-	margin: 0 0 16px 8px;
 }
 
-/* Notes */
+/* Notes (all layouts) */
 #Pik-notes {
-	position: absolute;
-	top: 544px;
-	left: 0;
-	width: 100%;
-	clear: both;
 	color: #CCC;
-	padding: 8px 16px;
-}
-#Pik-notes-handle {
-	height: 8px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-#Pik-notes h1 {
-	font-size: 1.75em;
 }
 #Pik-notes.pik-active {
 	color: inherit;
+}
+
+/* Remote connection indicator */
+#Pik-remote-status {
+	opacity: 0.5;
+}
+#Pik-remote-status.pik-connected {
+	opacity: 1;
+	color: lime;
+}
+
+/* Mobile layout */
+@media all and (max-width: 801px){
+
+	/* Elapsed time and slide number */
+	#Pik-timecontainer {
+		font-size: 2em;
+		font-weight: bold;
+	}
+	#Pik-framecontrols-slidecount {
+		float: left;
+	}
+	#Pik-elapsed {
+		float: right;
+	}
+
+	/* Slide controls */
+	#Pik-slideselect {
+		font-size: 1.5em;
+		margin: 8px 0 16px 0;
+		padding: 4px;
+	}
+	a {
+		font-size: 1.5em;
+		font-weight: bold;
+		margin: 8px 8px 0 0;
+	}
+
+	/* Wrapper and iframes */
+	#Pik-wrapper {
+		padding: 16px;
+	}
+	iframe {
+		display: block;
+		height: 200px !important;
+		width: 100%;
+		margin: 12px 0;
+		border: 1px solid black;
+	}
+
+	/* Hide the preview iframe; no room on a small display */
+	#Pik-frame-preview {
+		display: none;
+	}
+
+	/* Hide the clock; portable devices usually have their own clocks */
+	#Pik-time {
+		display: none;
+	}
+
+	/* Notes */
+	#Pik-notes {
+		font-size: 0.8em;
+	}
+
+}
+
+
+/* Regular big screen layout */
+@media all and (min-width: 801px){
+
+	/* Wrapper and iframes */
+	#Pik-wrapper {
+		position: relative;
+		width: 960px;
+		margin: 0 auto;
+		padding: 32px 0 0 0;
+	}
+	iframe {
+		background: #FFF;
+		border: 4px solid #FFF;
+		height: 100%;
+		width: 100%;
+		position: relative;
+		z-index: 1;
+	}
+
+	/* Handles and dragged elements */
+	.pik-handle {
+		position: absolute;
+		background: #EEE;
+		cursor: move;
+		transition: background 700ms;
+	}
+	.pik-resize-handle {
+		border-left: 12px solid #EEE;
+		border-top: 12px solid transparent;
+		border-right: 12px solid transparent;
+		border-bottom: 12px solid transparent;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 24px;
+		width: 24px;
+		z-index: 1337;
+		cursor: se-resize;
+		transform: translate(12px, 12px) rotate(45deg);
+	}
+	:hover > .pik-resize-handle {
+		border-left: 12px solid #CCC;
+	}
+	:hover > .pik-handle {
+		background: #CCC;
+	}
+	.pik-handled {
+		transition-property: background, box-shadow;
+		transition-duration: 700ms;
+		background: rgba(255, 255, 255, 0);
+	}
+	.pik-handled.pik-dragging {
+		z-index: 9999 !important;
+	}
+	.pik-handled:hover {
+		background: #FFF;
+		box-shadow: 0 0 96px -16px #111 !important;
+	}
+
+	/* Frames */
+	#Pik-frame, #Pik-frame-preview {
+		box-shadow: 0 0 64px -16px #111;
+		padding-top: 12px;
+	}
+	#Pik-frame-handle, #Pik-frame-preview-handle {
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 12px;
+	}
+	#Pik-frame {
+		position: relative;
+		top: 0;
+		left: 0;
+		float: left;
+		width: 640px;
+		height: 480px;
+	}
+	#Pik-frame-preview {
+		position: absolute;
+		top: 104px;
+		left: 550px;
+		width: 410px;
+		height: 308px;
+		z-index: 1338;
+	}
+	#Pik-frame:hover {
+		z-index: 1339;
+	}
+
+	/* Timer and slide counter */
+	#Pik-timecontainer {
+		font-size: 18px;
+		text-align: right;
+		position: absolute;
+		top: 32px;
+		left: 670px;
+		width: 290px;
+		float: right;
+		padding: 4px 16px 4px 28px;
+	}
+	#Pik-timecontainer-handle {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 12px;
+	}
+	#Pik-elapsed {
+		font-weight: bold;
+	}
+	#Pik-framecontrols-slidecount {
+		font-size: 38px;
+		font-weight: bold;
+		float: left;
+		margin-right: 32px
+	}
+
+	/* Slide controls */
+	#Pik-framecontrols {
+		position: absolute;
+		top: 440px;
+		left: 670px;
+		width: 290px;
+		text-align: right;
+		margin: 0;
+		padding: 8px 16px 8px 28px;
+	}
+	#Pik-framecontrols-handle {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 12px;
+	}
+	#Pik-slideselect {
+		width: 100%;
+		font-size: inherit;
+		margin: 0 0 16px 8px;
+	}
+
+	/* Notes */
+	#Pik-notes {
+		position: absolute;
+		top: 544px;
+		left: 0;
+		width: 100%;
+		clear: both;
+		padding: 8px 16px;
+	}
+	#Pik-notes-handle {
+		height: 8px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
 }

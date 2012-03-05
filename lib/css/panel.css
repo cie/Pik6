@@ -1,0 +1,49 @@
+/* Frame control panel */
+#Pik-framecontrols {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1337;
+	height: 32px;
+}
+#Pik-framecontrols-panel {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 20%;
+	right: 20%;
+	background: #000;
+	color: #FFF;
+	box-shadow: 0 0 32px #111;
+	padding: 0.5em;
+}
+
+/* Control panel links */
+#Pik-framecontrols a {
+	font-size: 125%;
+	color: #FFF !important;
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	width: 50%;
+	padding: 0.5em 1em;
+}
+#Pik-framecontrols a:nth-child(odd) {
+	float: left;
+}
+#Pik-framecontrols a:nth-child(even) {
+	float: right;
+}
+#Pik-framecontrols a:nth-child(odd):not(:first-child) {
+	clear: left;
+}
+
+/* Remote connection indicator */
+#Pik-remote-status {
+	opacity: 0.5;
+}
+#Pik-remote-status.pik-connected {
+	opacity: 1;
+	color: lime;
+}
