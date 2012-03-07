@@ -19,6 +19,9 @@ a {
 .pik-slide {
 	clear: both;
 }
+img {
+	max-width: 80%;
+}
 
 /* Emulate original slide layout for landscape format */
 @media print and (orientation:landscape){
@@ -36,13 +39,32 @@ a {
 
 /* Extra padding for portrait format; improves slides without headlines */
 @media print and (orientation:portrait){
-	.pik-slide:not(.noprint) {
+	.pik-slide {
 		padding-bottom: 2em;
 	}
 }
 
 /* No printing and no page breaks for these guys */
-:empty, .pik-noprint, .pik-notes, input, textarea, iframe, button {
+.pik-noprint, .pik-notes,
+input, textarea, iframe, button {
 	display: none !important;
 	page-break-after: auto !important;
+}
+
+/* Footnotes for print */
+@media print {
+	.pik-print-footnotes {
+		text-align: left;
+		font-size: 0.55em;
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+
+/* Hide footnoted outside of printing */
+@media not print {
+	.pik-print-footnotes {
+		display: none;
+	}
 }
