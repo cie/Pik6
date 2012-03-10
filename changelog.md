@@ -4,6 +4,7 @@ Changelog
 1.1.0
 -----
 
+  * Added remote control
   * Presenter is now configurable via drag & drop
   * Added notes
   * Added some print functionality
