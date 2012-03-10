@@ -21,7 +21,7 @@ var io = require('socket.io').listen(16911);
 // * `hide`: True if the presentation is hidden at the moment
 var cached_state = {
 	initialized: false,
-	file: 'start.html',
+	file: 'index/index.html',
 	slide: 0,
 	hide: ''
 };
