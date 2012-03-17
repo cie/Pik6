@@ -12,7 +12,9 @@ var directories = {
 		'lib/controls.js',
 		'lib/frame.js',
 		'lib/presenter.js',
+		'lib/presenter_ui.js',
 		'lib/presentation.js',
+		'lib/remote_ui.js',
 		'lib/worker.js',
 		'lib/pik.js',
 		'lib/print.js'
