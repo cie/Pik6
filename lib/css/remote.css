@@ -1,0 +1,44 @@
+@import url('common.css');
+
+/* Basics */
+html, body {
+	font-size: 15px;
+	font-family: Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+a, a:link, a:visited {
+	color: #000;
+	border-bottom: 1px solid #000;
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #000;
+	border-bottom: 1px solid transparent;
+}
+
+/* Slide controls */
+#Pik-slideselect {
+	width: 100%;
+	font-size: inherit;
+}
+
+/* Notes */
+#Pik-notes {
+	color: #CCC;
+}
+#Pik-notes.pik-active {
+	color: inherit;
+}
+
+/* Remote connection indicator */
+#Pik-remote-status {
+	opacity: 0.5;
+}
+#Pik-remote-status.pik-connected {
+	opacity: 1;
+	color: lime;
+}
