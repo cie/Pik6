@@ -25,7 +25,7 @@ var directories = {
 		'plugins/printHandout.js'
 	],
 	remote : [
-		'remote/remote.js'
+		'lib/remote/remote.js'
 	]
 };
 
