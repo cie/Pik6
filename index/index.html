@@ -13,12 +13,14 @@
 <div id="Pik-presentation-container">
 
 <div class="pik-slide" id="Start">
-	<h1>PIK6</h1>
+	<h1 style="margin-top: 0">PIK6</h1>
 	<h2>HTML5 presentation framework</h2>
-	<p class="center" style="margin-top: -0.75em; line-height:1.35">
+	<p class="center" style="margin-top: -0.85em; line-height:1.35">
 	<a id="Pik-browse" href="../presentations">Browse presentations</a>
 	<br>
 	<a target="_blank" href="../presenter.html">Launch the presenter view</a> *
+	<br>
+	<a href="../remote.html" id="Pik-switch-to-remote">Switch to the mobile remote</a>
 	<br>
 	<a href="../presentations/Pik/">Introduction</a>
 	<br>
@@ -34,6 +36,10 @@ if(typeof SharedWorker === 'function'){
 else {
 	$('Support').setStyle('background', 'red').set('text', 'Your browser doesn\'t!');
 }
+$('Pik-switch-to-remote').addEvent('click', function(evt){
+	evt.preventDefault();
+	window.parent.location.href = this.get('href');
+});
 </script>
 
 </div>
