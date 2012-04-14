@@ -21,10 +21,13 @@ body {
 
 
 /* Typography */
-h1, h2, p, ul, ol, p, pre, table, blockquote, details, textarea, .container {
+h1, h2, h3, p, ul, ol, p, pre, table, blockquote, details, textarea, .container {
 	display: block;
 	margin-left: 2.5%;
 	margin-right: 2.5%
+}
+ol {
+	margin-left: 5%;
 }
 h1 {
 	font-size: 3.5em;
@@ -213,5 +216,6 @@ pre.diff mark:nth-of-type(1) { background: yellow; }
 pre.diff mark:nth-of-type(2) { background: lime; }
 pre.diff mark:nth-of-type(3) { background: fuchsia; }
 pre.diff mark:nth-of-type(4) { background: aqua; }
+pre.diff mark:nth-of-type(5) { background: tomato; }
 
 } /* End "@media screen, projection" */

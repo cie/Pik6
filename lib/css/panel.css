@@ -38,12 +38,3 @@
 #Pik-framecontrols a:nth-child(odd):not(:first-child) {
 	clear: left;
 }
-
-/* Remote connection indicator */
-#Pik-remote-status {
-	opacity: 0.5;
-}
-#Pik-remote-status.pik-connected {
-	opacity: 1;
-	color: lime;
-}
