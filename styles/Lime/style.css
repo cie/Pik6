@@ -1,53 +1,54 @@
 /*
- * Default Pik6 theme
- * ------------------
+ * Lime
+ * ----
  *
- * Includes styles for syntax highlighting using google-code-prettify
+ * A simple green theme
  */
 
 @media screen, projection {
 
+* {
+	box-sizing: border-box;
+}
 body {
-	font-family: Georgia, "Times New Roman", serif;
+	font-family: Ubuntu, Arial, sans-serif;
 	line-height: 1.6;
 	background: #FFF;
 	color: #000;
 }
 .pik-slide {
-	font-size: 0.75em;
+	font-size: 0.7em;
 }
 
 /* Typography */
 h1, h2, p, ul, ol, p, pre, iframe {
-	margin-left: 4%;
-	margin-right: 4%
+	margin: 1em 4%;
 }
-h1 {
+h1, h2 {
+	font-family: Ubuntu, Arial, sans-serif;
+}
+h1, .big h2 {
 	color: #000;
-	font-size: 4.5em;
-	text-align: center;
-	font-weight: normal;
-	margin-top: 0.15em;
+	font-size: 3em;
+	font-style: normal;
+	margin-top: 0.75em;
 }
-h1 span {
+h2, .big p {
+	color: #083;
 	font-style: italic;
 	font-weight: bold;
-	font-size: 0.3em;
-	display: block;
-}
-h2 {
-	font-style: italic;
-	color: #AE1215;
-	font-size: 1.425em;
+	font-size: 2.25em;
+	margin-top: 0.4em;
+	margin-bottom: 0;
 }
 h1 + h2 {
-	text-align: center;
-	font-size: 1.75em;
-	margin-top: -2em;
+	margin-top: -1em;
 }
 pre {
 	overflow: hidden;
 	line-height: 1.4;
+	text-align: left !important;
+	font-size: 0.8em;
 }
 pre, code {
 	font-family: Monaco, "Bitstream Vera Sans Mono", "DejaVu Sans Mono" "Lucida Console", Consolas, Terminal, monospace;
@@ -57,23 +58,29 @@ code {
 	border: 1px solid rgb(240, 240, 240);
 	padding: 0.1em;
 }
-a, a:link, a:visited {
+a {
+	font-weight: bold;
 	cursor: pointer;
-	color: #AE1215;
+}
+a, a:link, a:visited {
+	color: #083;
 	text-decoration: none;
-	border-bottom: 0.1em solid #AE1215;
+	border-bottom: 0.1em solid #083;
 }
 a:visited {
-	border-bottom: 0.1em dotted #AE1215;
+	border-bottom: 0.1em dotted #083;
 }
 a:hover, a:active {
 	color: #000;
 	border-bottom: 0.1em solid transparent;
 }
+a:focus {
+	outline: 0;
+	color: #FFF;
+	background: #083;
+}
 small {
-	font-size: 0.6em;
-	font-style: italic;
-	display: block;
+	font-size: 0.5em;
 }
 
 /* Tables */
@@ -108,7 +115,7 @@ kbd {
 	padding: 0.2em 0.3em;
 }
 .shadow {
-	box-shadow: 0.1em 0.1em 0.65em #555;
+	box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.5);
 }
 
 /* Wrap two .center elements to center their children
@@ -131,14 +138,14 @@ kbd {
 
 /* Code highlighting */
 .pln { color: #000; }
-.str { color: #090; }
+.str { color: #060; }
 .kwd { color: #009; font-weight: bold; }
 .com { color: #900; font-style: italic; }
-.typ { color: #404; font-weight: bold; }
+.dec, .typ { color: #909; font-weight: bold; }
 .lit { color: #044; }
 .pun, .opn, .clo { color: #440; }
-.tag { color: #009; font-weight: bold; }
-.atn { color: #404; }
+.tag { color: #00C; font-weight: bold; }
+.atn { color: #000; }
 .atv { color: #090; }
 
 } /* End "@media all" */
@@ -147,7 +154,7 @@ kbd {
 @media print {
 
 body {
-	font-family: Georgia, "Times New Roman", serif;
+	font-family: Ubuntu, Arial, sans-serif;
 }
 h1 {
 	color: #000;
@@ -157,14 +164,14 @@ h1 {
 }
 h2 {
 	font-style: italic;
-	color: #AE1215;
+	color: #083;
 	font-size: 1.5em;
 }
 h1 + h2 {
 	font-size: 2.5em;
 }
 a {
-	color: #AE1215 !important;
+	color: #083 !important;
 }
 
 } /* End "@media print" */

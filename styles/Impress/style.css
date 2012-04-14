@@ -1,0 +1,212 @@
+/*
+ * Impress
+ * -------
+ * People were complaining that Pik6 didn't look quite as good as impress.js
+ * (http://bartaz.github.com/impress.js/). This style shows how this can be changed. It
+ * currenty only covers up to 18 slides, but that can easily changed. Also it was written
+ * with the Pik6 introduction presentation in mind; in may or may not work for other
+ * presentations without modifications.
+ *
+ * To get the transitions to work, add the class `impress` to your `<html>` and `<body>`
+ * elements.
+ */
+
+@media screen, projection {
+
+/* Setup */
+html.impress, body.impress {
+	overflow: hidden;
+}
+.impress #Pik-presentation-container {
+	transition: transform 1300ms, opacity 1300ms;
+	transform-origin: 50% 50%;
+}
+.impress .pik-slide {
+	visibility: visible;
+	opacity: 0.45;
+	transform-origin: 50% 50%;
+}
+.impress .pik-slide.pik-current {
+	visibility: visible;
+	opacity: 1;
+	z-index: 42;
+}
+
+/* Fine tuning the rickroll */
+.impress #Demo iframe {
+	box-shadow: 0.25em 0.25em 1em rgba(0, 0, 0, 0.5);
+}
+
+/* Slide 1 */
+.impress .pik-slide:nth-of-type(1) {
+	top: -100%;
+	left: -100%;
+}
+.impress .pik-body-slide-1 #Pik-presentation-container {
+	transform: translate(100%, 100%);
+}
+
+/* Slide 2... you get the idea */
+.impress .pik-slide:nth-of-type(2) {
+	top: -100%;
+	transform: rotate(90deg);
+}
+.impress .pik-body-slide-2 #Pik-presentation-container {
+	transform: rotate(-90deg) translate(0%, 100%);
+}
+
+.impress .pik-slide:nth-of-type(3) {
+	top: -50%;
+	left: -25%;
+	transform: rotate(0deg) scale(0.5);
+}
+.impress .pik-body-slide-3 #Pik-presentation-container {
+	transform: rotate(0deg) scale(2.0) translate(25%, 50%);
+}
+
+.impress .pik-slide:nth-of-type(4) {
+	top: 5%;
+}
+.impress .pik-body-slide-4 #Pik-presentation-container {
+	transform: translate(0, -5%);
+}
+
+.impress .pik-slide:nth-of-type(5) {
+	top: 50%;
+	left: -200%;
+	transform: scale(4.0);
+}
+.impress .pik-body-slide-5 #Pik-presentation-container {
+	transform: scale(0.25) translate(200%, -50%);
+}
+
+.impress .pik-slide:nth-of-type(6) {
+	top: 90%;
+	left: -35%;
+	transform: rotate(90deg);
+}
+.impress .pik-body-slide-6 #Pik-presentation-container {
+	transform: rotate(-90deg) translate(35%, -90%);
+}
+
+.impress .pik-slide:nth-of-type(7) {
+	top: 120%;
+	left: 120%;
+	transform: scale(2);
+}
+.impress .pik-body-slide-7 #Pik-presentation-container {
+	transform: scale(0.5) translate(-120%, -120%);
+}
+
+.impress .pik-slide:nth-of-type(8) {
+	top: -50%;
+	left: 100%;
+	transform: rotate(-90deg);
+}
+.impress .pik-body-slide-8 #Pik-presentation-container {
+	transform: rotate(90deg) translate(-100%, 50%);
+}
+
+.impress .pik-slide:nth-of-type(9) {
+	top: -50%;
+	left: 175%;
+	transform: rotate(-90deg);
+}
+.impress .pik-body-slide-9 #Pik-presentation-container {
+	transform: rotate(90deg) translate(-175%, 50%);
+}
+
+.impress .pik-slide:nth-of-type(10) {
+	top: -90%;
+	left: 133%;
+	transform: scale(0.33) rotate(-90deg);
+}
+.impress .pik-body-slide-10 #Pik-presentation-container {
+	transform: scale(3.0) rotate(90deg) translate(-133%, 90%);
+}
+
+.impress .pik-slide:nth-of-type(11) {
+	top: -40%;
+	left: 133%;
+	transform: scale(0.25) rotate(-90deg);
+}
+.impress .pik-body-slide-11 #Pik-presentation-container {
+	transform: scale(4.0) rotate(90deg) translate(-133%, 40%);
+}
+
+.impress .pik-slide:nth-of-type(12) {
+	top: -2%;
+	left: 133%;
+	transform: scale(0.2) rotate(-90deg);
+}
+.impress .pik-body-slide-12 #Pik-presentation-container {
+	transform: scale(5.0) rotate(90deg) translate(-133%, 2%);
+}
+
+.impress .pik-slide:nth-of-type(13) {
+	top: -20%;
+	left: 144%;
+	transform: scale(0.1) rotate(180deg);
+}
+.impress .pik-body-slide-13 #Pik-presentation-container {
+	transform: scale(10.0) rotate(180deg) translate(-144%, 20%);
+}
+
+.impress .pik-slide:nth-of-type(14) {
+	top: -190%;
+	left: -30%;
+	transform: rotate(-90deg) scale(0.5);
+}
+.impress .pik-body-slide-14 #Pik-presentation-container {
+	transform: rotate(90deg) scale(2.0) translate(30%, 190%);
+}
+
+/* Example for a slide that's only visible when active */
+.impress .pik-slide:nth-of-type(15) {
+	visibility: hidden;
+}
+.impress .pik-slide:nth-of-type(15) {
+	transform: scale(2.0);
+}
+.impress .pik-body-slide-15 #Pik-presentation-container {
+	transform: scale(0.5);
+}
+.impress .pik-body-slide-15 .pik-slide:nth-of-type(15) {
+	visibility: visible;
+}
+
+.impress .pik-slide:nth-of-type(16) {
+	top: -280%;
+	left: -40%;
+	transform: rotate(180deg);
+}
+.impress .pik-body-slide-16 #Pik-presentation-container {
+	transform: rotate(180deg) translate(40%, 280%);
+}
+
+.impress .pik-slide:nth-of-type(17) {
+	top: -380%;
+	left: -40%;
+	transform: rotate(180deg);
+}
+.impress .pik-body-slide-17 #Pik-presentation-container {
+	transform: rotate(180deg) translate(40%, 380%);
+}
+
+.impress .pik-slide:nth-of-type(18) {
+	top: -470%;
+	left: 80%;
+	transform: rotate(270deg) scale(2.0);
+}
+.impress .pik-body-slide-18 #Pik-presentation-container {
+	transform: rotate(90deg) scale(0.5) translate(-80%, 470%);
+}
+
+
+/* Hide slides that are not supported by the current style sheet */
+.impress .pik-slide:nth-of-type(18) ~ .pik-slide {
+	display: none;
+}
+
+
+} /* End "@media screen, projection" */

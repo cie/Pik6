@@ -1,7 +1,11 @@
 /*
  * Pik6 theme template
+ * -------------------
+ *
  * Use this as a basis for your own theme
  */
+
+@media screen, projection {
 
 /* For general font and color styles */
 body {
@@ -20,3 +24,10 @@ body {
 /* Special styles for the previous slide (visibility:hidden by default) */
 .pik-slide.pik-prev {
 }
+
+} /* End "@media screen, projection" */
+
+
+/* Don't forget print styles! */
+@media print {
+} /* End "@media print" */

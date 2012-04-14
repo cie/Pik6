@@ -2,17 +2,31 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to PIK6</title>
+	<title>Welcome to PIK6 (1.1.0)</title>
 	<meta http-equiv="expires" content="0">
 	<script src="../../lib/pik.js"></script>
 	<link href="../../styles/Default/style.css" rel="stylesheet">
+	<link href="../../styles/Fancy/style.css" rel="stylesheet">
+	<link href="../../styles/Impress/style.css" rel="stylesheet">
 	<script src="google-code-prettify/prettify.js"></script>
 	<base target="_blank">
+	<style>
+		/* Fine tuning the Rickroll */
+		#Demo iframe {
+			border: none;
+			width: 70%;
+			height: 70%;
+			position: absolute;
+			top: 15%;
+			left: 15%;
+			right: 15%;
+			bottom: 15%;
+			z-index: 1337;
+		}
+	</style>
 </head>
 <body onload="prettyPrint()">
-
 <div id="Pik-hide"></div>             <!-- Important - do not remove or rename! -->
-
 <div id="Pik-presentation-container"> <!-- Important - do not remove or rename! -->
 
 <div class="pik-slide" id="Start">
@@ -21,8 +35,8 @@
 	PIK6
 </h1>
 <h2>HTML5 presentation framework</h2>
-<p class="center">
-	Press <kbd>&rarr;</kbd> to learn more
+<p class="center pik-noprint">
+	Press <kbd>&rarr;</kbd> or swipe to the left to learn more
 </p>
 </div>
 
@@ -51,8 +65,10 @@
 <ul>
 <li>Requires a modern web browser
 <li>Requires a web server to run from
-<li>Shares all drawbacks common to HTML slides (no GUI to create presentations, no PDF export, images hard to use)
+<li>Shares all drawbacks common to HTML slides (no GUI to create presentations, no PDF export*, images hard to use)
 </ul>
+<p>
+<small>* PIK6 handles printing somewhat well, so PDF export using Chrome's "print to PDF" function <em>is</em> possible</small>
 </div>
 
 <div class="pik-slide">
@@ -68,7 +84,8 @@
 <h2>Controls</h2>
 <ul>
 <li>Use the left and right arrow keys to navigate through the slides
-<li>Move your Mouse to the bottom of the presentation view to reveal a panel with more controls
+<li>On mobile devices you can swipe left and right to navigate
+<li>Move your Mouse to the bottom of the presentation view to reveal the control panel
 <li>The <kbd>F5</kbd> and <kbd>ESC</kbd> keys hide the presentation
 </ul>
 </div>
@@ -76,7 +93,7 @@
 <div class="pik-slide">
 <h2>Presenter mode</h2>
 <ul>
-<li>Open <code>presenter.html</code> in a new window to use the presenter mode.
+<li>Open <code>presenter.html</code> in a new window (use the control panel) to use the presenter mode.
 <li>The presenter mode offers more control elements, displays a timer and lets you see the
 currently displayed slide and which slide comes next
 <li>Requires a browser that supports <a href="http://www.w3.org/TR/workers/">Shared Workers</a> (Chrome 8+ or Opera 11+)
@@ -97,16 +114,34 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 </div>
 
 <div class="pik-slide">
+<h2>Notes</h2>
+<ul>
+<li>Notes can be added using an element with the class <code>pik-notes</code> for each slide
+<li>Notes are invisible in the presentation, but are shown in the presenter view
+<li>Look at this slide for an example
+</ul>
+<div class="pik-notes">
+	<h3>Use all the tags you like!</h3>
+	<ul>
+		<li>No limitations! Use <a href="http://www.google.com">links</a>, headlines and
+		    everything else!
+		<li>Notes won't be printed
+	</ul>
+</div>
+</div>
+
+<div class="pik-slide">
 <h2>Styling presentations</h2>
 <ul>
 <li>Styles (simple CSS files) reside in the <code>styles</code> folder
 <li>Styles includes in PIK6:
 	<ul>
-		<li>Default (used in this presentation)
-		<li>Dark (simple white text on a dark backgroud)
-		<li>Fancy (demonstrates slide transitions, to be used together with Default)
+		<li><em>Default</em> (used in this presentation)
+		<li><em>Lime</em> (green text, white backgroud)
+		<li><em>Dark</em> (simple white text on a dark backgroud)
 	</ul>
 <li>Use <code>styles/Template/style.css</code> as a starting point for your own style
+<li><a href="http://leaverou.github.com/prefixfree/">-prefix-free</a> (included by default) takes care of all vendor prefixes, so you don't have to.
 </ul>
 </div>
 
@@ -117,24 +152,34 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 class <code>pik-current</code> are invisible by default
 <li>By changing the behavior of this class and the classes <code>pik-next</code> and
 <code>pik-prev</code> it is possible to create slide transitions
-<li>Try it! <a id="MakeFancy">Add a stylesheet with transitions</a> (<a id="RevertFancy">remove here</a>)
+<li>The styles <em>Fancy</em> and <em>Impress</em> contain two examples of this; use
+them in addition to normal presentation styles to get fancy. See the next slide for
+examples.
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Slide transitions in action</h2>
+<ul>
+<li><a id="MakeFancy">Add fancy transitions</a>
+<li><a id="MakeImpressive">Add impressive transitions</a>
+<li><a id="RevertTransitions">Remove transitions</a>
 </ul>
 </div>
 <script>
 $('MakeFancy').addEvent('click', function(){
-	if($('FancyStyles') === null){
-		new Element('link', {
-			'rel': 'stylesheet',
-			'href': '../../styles/Fancy/style.css',
-			'id': 'FancyStyles'
-		}).inject($$('head')[0]);
-	}
+	$$('html').addClass('fancy').removeClass('impress');
+	$$('body').addClass('fancy').removeClass('impress');
 });
-$('RevertFancy').addEvent('click', function(){
-	$$('#FancyStyles').destroy();
+$('MakeImpressive').addEvent('click', function(){
+	$$('html').addClass('impress').removeClass('fancy');
+	$$('body').addClass('impress').removeClass('fancy');
+});
+$('RevertTransitions').addEvent('click', function(){
+	$$('html').removeClass('fancy').removeClass('impress');
+	$$('body').removeClass('fancy').removeClass('impress');
 });
 </script>
-
 
 <div class="pik-slide">
 <h2>Programming presentations</h2>
@@ -159,7 +204,7 @@ $('RevertFancy').addEvent('click', function(){
 });</pre>
 </div>
 
-<div class="pik-slide center" id="Demo">
+<div class="pik-slide center noprint" id="Demo">
 	<div class="center" style="width:640px; height:480px; background:url(loader.gif) center center no-repeat;"></div>
 </div>
 <script>
@@ -175,15 +220,36 @@ window.addEvent('domready', function(){
 });</script>
 
 <div class="pik-slide">
+<h2>Printing presentations</h2>
+<ul>
+<li>Use the print link in the control panel to print your presentation
+<li>A very basic print stylesheet is included; use your own style file to enhance it to your liking
+<li>Hide non-printable elements by adding the class <code>noprint</code>
+</ul>
+</div>
+
+<div class="pik-slide">
+<h2>Plugins</h2>
+<ul>
+<li>Plugins are simple scripts that can be used to add features a presentation
+<li><em>backgroundHarmonizer.js</em> keeps the presentation document's background color in sync with the current slide's background color.
+<li><em>inputProtector.js</em> prevents Pik6 from interpreting arrow key events emitted on input elements in the presentation as presentation commands
+<li><em>printHandout.js</em> enables a handout mode for printing, where only slides with the class <code>handout</code> are printed
+</ul>
+</div>
+
+<div class="pik-slide">
 <h2>Links</h2>
 <ul>
 <li><a href="https://github.com/SirPepe/Pik6">Github</a>
 (<a href="https://github.com/SirPepe/Pik6/issues">report bugs here!</a>)
 <li><a href="http://pik6.peterkroener.de/">Web site</a>
+<li><a href="../../changelog.md">Changelog</a>
 <li><a href="https://flattr.com/thing/b216317619d293466765285f678a0d9d">Support the project</a>
 <li><a href="mailto:peter@peterkroener.de">Contact me</a>
 </ul>
 </div>
+
 
 </div> <!-- End #Pik-presentation-container -->
 </body>

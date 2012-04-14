@@ -1,5 +1,5 @@
-PIK6 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Sir_Pepe&url=https://github.com/SirPepe/Pik6/&title=Pik6&language=en&tags=github&category=software)
-====
+PIK6 1.1.0 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Sir_Pepe&url=https://github.com/SirPepe/Pik6/&title=Pik6&language=en&tags=github&category=software)
+==========
 
 HTML5 presentation framework (MIT license)
 
@@ -15,14 +15,14 @@ Features
   * 100% HTML5, CSS and JavaScript (MooTools)
   * Programmable slides, easy to embed content from the web
   * Great performance in modern browsers even with hundreds of slides
+  * As fancy or a simple as you want it to be
   * **Multiple presentation views and a presenter mode** (using HTML5 Shared Web Workers)
 
 Drawbacks
 --------
 
   * Requires a modern browser and a web server to run from
-  * Includes **no fancy stuff** by default. You'll have to build your super-awesome 3D slide transitions by yourself.
-  * All drawbacks common to HTML slides (no PDF export, images hard to use)
+  * Shares all drawbacks common to HTML slides (no GUI to create presentations, no PDF export, images hard to use)
 
 How to use
 ----------

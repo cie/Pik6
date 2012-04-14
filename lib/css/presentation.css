@@ -31,6 +31,11 @@ html, body, #Pik-presentation-container {
 	z-index: 999999999999999999;
 }
 
+/* Hide notes */
+.pik-notes {
+	display: none;
+}
+
 /* Special classes make slides and hide overlay visible */
 .pik-slide.pik-current {
 	visibility: visible;

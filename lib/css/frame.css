@@ -1,0 +1,17 @@
+/* Styles for the default frame (index.html) */
+* {
+	box-sizing: border-box;
+}
+html, body {
+	overflow: hidden;
+	font-size: 15px;
+	font-family: Arial, sans-serif;
+}
+html, body, iframe {
+	display: block;
+	border: none;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
