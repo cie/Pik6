@@ -19,31 +19,22 @@ window.addEvent('load', function(){
 </script>
 
 <div id="Pik-wrapper">
-	<div id="Pik-timecontainer" class="pik-handled">
-		<div id="Pik-timecontainer-handle" class="pik-handle"></div>
-		<span id="Pik-framecontrols-slidecount">0 / 0</span>
-		<span id="Pik-elapsed">00:00:00</span><br><span id="Pik-time">00:00:00</span>
+	<span id="Pik-framecontrols-slidecount">0 / 0</span>
+	<div id="Pik-timecontainer">
+		<span id="Pik-elapsed">00:00:00</span>
+		<span id="Pik-time">00:00:00</span>
 	</div>
-	<div id="Pik-frame" class="pik-handled">
-		<div id="Pik-frame-handle" class="pik-handle"></div>
-		<div id="Pik-frame-resize-handle" class="pik-resize-handle"></div>
+	<div id="Pik-frame">
 		<iframe id="Mainframe" name="Mainframe" src="index/index.html"></iframe>
 	</div>
-	<div id="Pik-frame-preview" class="pik-handled">
-		<div id="Pik-frame-preview-handle" class="pik-handle"></div>
-		<div id="Pik-frame-preview-resize-handle" class="pik-resize-handle"></div>
-		<iframe src="index/index.html"></iframe>
-	</div>
-	<div id="Pik-framecontrols" class="pik-handled">
+	<div id="Pik-framecontrols">
 		<div id="Pik-framecontrols-handle" class="pik-handle"></div>
 		<select id="Pik-slideselect"></select><br>
 		<a id="Pik-framecontrols-reload" title="Reload the current presentation">Reload</a>
 		<a id="Pik-framecontrols-browse" href="presentations" target="Mainframe" title="Browse the presentations directory">Browse</a>
 		<span id="Pik-remote-status">●</span> <a id="Pik-remote" title="Connect to a remote server">Remote</a>
 	</div>
-	<div id="Pik-notes" class="pik-handled">
-		<div id="Pik-notes-handle" class="pik-handle"></div>
-		<h1>Notes</h1>
+	<div id="Pik-notes">
 		<div id="Pik-notes-content"></div>
 	</div>
 </div>
