@@ -16,14 +16,14 @@
 /* For general font and color styles */
 body.fancy {
 	font-size: 0.9em;
-	background: #10131a;
+	background: #141821 !important;
 }
 
 /* General slide styles */
 .fancy .pik-slide {
 	border-radius: 1em;
 	background: white;
-	box-shadow: 0.15em 0.15em 2em #000;
+	box-shadow: 0 0 2em #000;
 	box-sizing: border-box;
 	padding: 0 1.5em;
 }
@@ -31,10 +31,10 @@ body.fancy {
 /* The following rules overwrite defaults from lib/presentation.css to make room for the
    box shadow and other effects */
 .fancy .pik-slide {
-	top: 3%;
-	left: 3%;
-	height: 94%;
-	width: 94%;
+	top: 2%;
+	left: 2%;
+	height: 96%;
+	width: 96%;
 }
 
 /* All inactive slides are deposited outside the frame to the left */

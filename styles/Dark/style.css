@@ -131,6 +131,9 @@ td, th {
 	border: 0.2em solid #000;
 	padding: 0.1em 0.5em;
 }
+table.noborder td, table.noborder th {
+	border: none !important;
+}
 .pik-slide.white th {
 	color: white;
 	background: black;
@@ -197,6 +200,17 @@ pre.center {
 }
 pre.center {
 	text-align: left;
+}
+
+/* Overlay H2 */
+h2.overlay {
+	position: absolute;
+	bottom: 0.25em;
+	right: 0.25em;
+	z-index: 1337;
+	background: rgba(0, 0, 0, 0.9);
+	padding: 0.2em 0.5em;
+	border-radius: 0.25em;
 }
 
 /* Prettyprint code highlighting */
