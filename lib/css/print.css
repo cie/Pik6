@@ -4,7 +4,10 @@ html {
 	line-height: 1.5;
 	background: white;
 	color: black;
-	font-size: 90%;
+	font-size: 85%;
+}
+h1, h2, h3 {
+	clear: both;
 }
 .center {
 	text-align: center;
@@ -19,6 +22,13 @@ a {
 }
 .pik-slide {
 	clear: both;
+}
+.pik-slide:before, .pik-slide:after {
+	content: "";
+	display: table;
+}
+.pik-slide:after {
+	clear: both
 }
 img {
 	max-width: 80%;
