@@ -1,60 +1,97 @@
 /*
- * Coffee
- * ------
+ * Cake
+ * ----
  *
- * A dark, relaxed theme
+ * Based on http://www.colourlovers.com/palette/46688/fresh_cut_day
  */
 
-@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic&subset=latin,latin-ext);
+
 
 @media screen, projection {
 
 * {
 	box-sizing: border-box;
-	text-shadow: 0 0.05em 0.5em rgba(0, 0, 0, 0.5);
 }
 body {
-	font-family: "Istok Web", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	line-height: 1.5;
-	background: #1C1C1C radial-gradient(#333, #111);
-	color: #FFF;
+	background: #FFF;
+	color: #0A0204;
+	border-top: 0.75em solid #FFF;
+	box-shadow: inset 0 0.5em 3em rgba(0, 0, 0, 0.25);
+}
+body:after, body:before {
+	content: "";
+	position: absolute;
+	z-index: 1337;
+	top: 0;
+	width: 33%;
+	height: 0.75em;
+}
+body:before {
+	left: 0;
+	background: #40c0cb;
+}
+body:after {
+	right: 0;
+	background: #aee239;
 }
 .pik-slide {
-	font-size: 0.74em;
+	width:  100% !important;
+	height: 100% !important;
+	font-size: 0.725em;
 }
-.pik-slide.white {
-	background: #FFF;
+
+/* Slide Transitions */
+.pik-slide {
+	transform: translateY(200%);
+}
+.pik-slide.pik-current {
+	z-index: 9000;
+	transform: translateY(0);
+}
+.pik-slide.pik-prev {
+	visibility: visible;
+	transform: translateY(100%);
+}
+.pik-slide.pik-next {
+	visibility: visible;
+	transform: translateY(-100%);
+}
+.pik-slide.pik-next ~ .pik-slide {
+	visibility: visible;
+	transform: translateY(-200%);
+}
+.pik-slide.pik-next ~ .pik-slide ~ .pik-slide {
+	display: none;
+}
+.pik-slide {
+	transition: transform 800ms ease-out, visibility 800ms ease-out;
 }
 
 
 /* Typography */
-h1, h2, p, ul, ol, p, pre, iframe {
+h1, h2, p, ul, ol, p, pre, details {
 	margin: 1em 3%;
 }
 h1, h2, h3 {
-	font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+	font-family: "Crete Round", Arial, sans-serif;
+	font-weight: normal;
 }
 h1 {
-	font-size: 6em;
-	margin-top: 0.75em;
-	text-shadow: 0 0.02em 0     #999,
-	             0 0.05em 0.5em rgba(0, 0, 0, 0.5);
+	font-size: 3.75em;
 }
 h2 {
 	line-height: 1.2;
-	color: #E6DB74;
-	font-weight: bold;
-	font-size: 2.4em;
-	margin-top: 0.25em !important;
-	margin-bottom: 0 !important;
-	text-shadow: 0 0.03em 0     #B3A847,
-	             0 0.05em 0.5em rgba(0, 0, 0, 0.5);
+	color: #0096B1;
+	font-size: 1.7em;
+	margin-top: 0.6em;
+	margin-bottom: 0;
 }
 h3 {
 	font-size: 1.75em;
 	margin-bottom: 0;
-	text-shadow: 0 0.03em 0     #999,
-	             0 0.05em 0.5em rgba(0, 0, 0, 0.5);
 }
 ul, ol {
 	padding-left: 1em;
@@ -96,21 +133,26 @@ a {
 	padding: 0 0.1em;
 }
 a, a:link, a:visited {
-	color: #66D9EF;
-	background: #2F2F2F;
+	color: #FFF;
+	background: #7FA900;
 	text-decoration: none;
+	padding: 0.1em;
+	border-radius: 0.2em;
 }
 a:hover, a:active {
 	color: #FFF;
-	background: #66D9EF;
+	background: #0096B1;
 }
 a:focus {
 	outline: 0;
-	color: #000;
-	background: #083;
+	color: #C00;
+	background: none;
 }
 a.imagelink{
 	background: none;
+}
+s {
+	opacity: 0.35;
 }
 mark {
 	background: yellow;
@@ -151,12 +193,19 @@ tr:first-child th {
 tr:not(:first-child) th:first-child {
 	text-align: right;
 }
-
+td.yes {
+	color: #060;
+}
+td.no {
+	color: #C00;
+}
 
 /* Extras */
 iframe {
 	width: 100%;
+	height: 95%;
 	border: none;
+	margin: 0;
 }
 kbd {
 	font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
@@ -194,16 +243,16 @@ kbd {
 @media all {
 
 /* Code highlighting */
-.pln { color: #FFF; }
-.str { color: #E6DB74; }
+.pln { color: #000; }
+.str { color: #558A00; }
 .kwd { color: #FF981F; font-weight: bold; }
-.com { color: #AAA; font-style: italic; }
-.dec, .typ { color: #AE81FF; font-weight: bold; }
-.lit { color: #E6DB74; }
-.pun, .opn, .clo { color: #AAA; }
+.com { color: #666; font-style: italic; }
+.dec, .typ { color: #5f47ff; font-weight: bold; }
+.lit { color: #558A00; }
+.pun, .opn, .clo { color: #666; }
 .tag { color: #F92672; font-weight: bold; }
-.atn { color: #a6e22e; }
-.atv { color: #66D9C5; }
+.atn { color: #369400; }
+.atv { color: #0061A6; }
 
 /* Highlight different parts of code differently */
 pre.diff mark:nth-of-type(1) { background: yellow; }

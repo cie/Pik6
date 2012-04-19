@@ -6,8 +6,6 @@
 	<meta http-equiv="expires" content="0">
 	<script src="../../lib/pik.js"></script>
 	<link href="../../styles/Default/style.css" rel="stylesheet">
-	<link href="../../styles/Fancy/style.css" rel="stylesheet">
-	<link href="../../styles/Impress/style.css" rel="stylesheet">
 	<script src="google-code-prettify/prettify.js"></script>
 	<base target="_blank">
 	<style>
@@ -152,34 +150,8 @@ You can use <code>presentations/Template/index.html</code> as a starting point.
 class <code>pik-current</code> are invisible by default
 <li>By changing the behavior of this class and the classes <code>pik-next</code> and
 <code>pik-prev</code> it is possible to create slide transitions
-<li>The styles <em>Fancy</em> and <em>Impress</em> contain two examples of this; use
-them in addition to normal presentation styles to get fancy. See the next slide for
-examples.
 </ul>
 </div>
-
-<div class="pik-slide">
-<h2>Slide transitions in action</h2>
-<ul>
-<li><a id="MakeFancy">Add fancy transitions</a>
-<li><a id="MakeImpressive">Add impressive transitions</a>
-<li><a id="RevertTransitions">Remove transitions</a>
-</ul>
-</div>
-<script>
-$('MakeFancy').addEvent('click', function(){
-	$$('html').addClass('fancy').removeClass('impress');
-	$$('body').addClass('fancy').removeClass('impress');
-});
-$('MakeImpressive').addEvent('click', function(){
-	$$('html').addClass('impress').removeClass('fancy');
-	$$('body').addClass('impress').removeClass('fancy');
-});
-$('RevertTransitions').addEvent('click', function(){
-	$$('html').removeClass('fancy').removeClass('impress');
-	$$('body').removeClass('fancy').removeClass('impress');
-});
-</script>
 
 <div class="pik-slide">
 <h2>Programming presentations</h2>

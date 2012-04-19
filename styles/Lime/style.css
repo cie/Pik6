@@ -32,17 +32,26 @@ body {
 	z-index: 9000;
 	transform: translateX(0);
 }
+.pik-slide.pik-current > * {
+	opacity: 1;
+}
 
 /* The previous slide moves out of the frame to the left */
 .pik-slide.pik-prev {
 	visibility: visible;
 	transform: translateX(-110%);
 }
+.pik-slide.pik-prev > * {
+	opacity: 0.2;
+}
 
 /* The next slide comes into the frame from the right */
 .pik-slide.pik-next {
 	visibility: visible;
 	transform: translateX(110%);
+}
+.pik-slide.pik-next > * {
+	opacity: 0.2;
 }
 
 /* The slide after the next slide comes into the frame from the right too */
@@ -58,7 +67,7 @@ body {
 
 /* Add a fancy transition */
 .pik-slide {
-	transition: transform 750ms, visibility 750ms;
+	transition: transform 400ms linear, visibility 400ms linear;
 }
 
 /* Typography */
@@ -83,13 +92,13 @@ h1, .big h2 {
 }
 h2, .big p {
 	font-size: 1.5em;
-	line-height: 1.3;
+	line-height: 1.25;
 	color: #083;
 	font-style: italic;
 	font-weight: bold;
 	font-size: 1.8em;
-	margin-top: 0.5em;
-	margin-bottom: 0.55em;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
 }
 h1 + h2 {
 	margin-top: -1em;
