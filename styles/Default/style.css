@@ -28,6 +28,9 @@ body {
 	height: 95% !important; /* Override .center */
 	width: 95% !important;  /* Override .center */
 }
+.pik-slide.black {
+	background: black;
+}
 
 /* All inactive slides are deposited outside the frame to the left */
 .pik-slide {
@@ -148,7 +151,7 @@ a.imagelink {
 .left {
 	text-align: left;
 }
-input, button {
+input, output, button, keygen {
 	font-size: inherit;
 }
 small {
@@ -173,14 +176,25 @@ tr:first-child th {
 tr:not(:first-child) th:first-child {
 	text-align: right;
 }
+td.yes {
+	color: #060;
+}
+td.no {
+	color: #C00;
+}
 
 /* Extras */
 mark {
 	display: inline-block;
 }
+mark span {
+	color: #000 !important;
+}
 iframe {
-	width: 100%;
+	width: 96%;
+	height: 96%;
 	border: none;
+	margin: 3%;
 }
 kbd {
 	font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
@@ -223,7 +237,7 @@ kbd {
 .kwd { color: #009; font-weight: bold; }
 .com { color: #900; font-style: italic; }
 .dec, .typ { color: #909; font-weight: bold; }
-.lit { color: #044; }
+.lit { color: #066; }
 .pun, .opn, .clo { color: #440; }
 .tag { color: #00C; font-weight: bold; }
 .atn { color: #000; }

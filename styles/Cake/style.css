@@ -67,7 +67,7 @@ body:after {
 	display: none;
 }
 .pik-slide {
-	transition: transform 800ms ease-out, visibility 800ms ease-out;
+	transition: transform 700ms ease-out, visibility 700ms ease-out;
 }
 
 
@@ -169,7 +169,7 @@ small {
 .left {
 	text-align: left;
 }
-input, button {
+input, output, button, keygen {
 	font-size: inherit;
 }
 
@@ -244,11 +244,11 @@ kbd {
 
 /* Code highlighting */
 .pln { color: #000; }
-.str { color: #558A00; }
+.str { color: #5C9900; }
 .kwd { color: #FF981F; font-weight: bold; }
 .com { color: #666; font-style: italic; }
 .dec, .typ { color: #5f47ff; font-weight: bold; }
-.lit { color: #558A00; }
+.lit { color: #0096B1; }
 .pun, .opn, .clo { color: #666; }
 .tag { color: #F92672; font-weight: bold; }
 .atn { color: #369400; }

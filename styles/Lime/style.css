@@ -13,21 +13,34 @@
 body {
 	font-family: Ubuntu, Arial, sans-serif;
 	line-height: 1.6;
-	background: #CCC !important; /* Override background harmonizer function */
+	background: #CCC;
 	color: #333;
+	counter-reset: slidenum;
 }
 .pik-slide {
 	font-size: 0.7em;
 	background: #FFF;
 	box-shadow: 0 0 2.5em -0.5em #888;
 }
+.pik-slide > * {
+	position: relative;
+	z-index: 1;
+}
+.pik-slide:not(:first-child):before {
+	content: counter(slidenum);
+	counter-increment: slidenum;
+	color: #F2F2F2;
+	font-size: 10em;
+	position: absolute;
+	z-index: 1;
+	bottom: -0.2em;
+	right: 0.2em;
+}
 
-/* All inactive slides are deposited outside the frame to the left */
+/* Add a fancy transition */
 .pik-slide {
 	transform: translateX(-220%);
 }
-
-/* The active slide is positioned in the middle */
 .pik-slide.pik-current {
 	z-index: 9000;
 	transform: translateX(0);
@@ -35,8 +48,6 @@ body {
 .pik-slide.pik-current > * {
 	opacity: 1;
 }
-
-/* The previous slide moves out of the frame to the left */
 .pik-slide.pik-prev {
 	visibility: visible;
 	transform: translateX(-110%);
@@ -44,8 +55,6 @@ body {
 .pik-slide.pik-prev > * {
 	opacity: 0.2;
 }
-
-/* The next slide comes into the frame from the right */
 .pik-slide.pik-next {
 	visibility: visible;
 	transform: translateX(110%);
@@ -53,25 +62,19 @@ body {
 .pik-slide.pik-next > * {
 	opacity: 0.2;
 }
-
-/* The slide after the next slide comes into the frame from the right too */
 .pik-slide.pik-next ~ .pik-slide {
 	visibility: visible;
 	transform: translateX(220%);
 }
-
-/* Hide the rest of the slides for performance reasons */
 .pik-slide.pik-next ~ .pik-slide ~ .pik-slide {
 	display: none;
 }
-
-/* Add a fancy transition */
 .pik-slide {
-	transition: transform 400ms linear, visibility 400ms linear;
+	transition: transform 450ms ease-in-out, visibility 450ms linear;
 }
 
 /* Typography */
-h1, h2, p, ul, ol, p, pre, iframe {
+h1, h2, p, ul, ol, p, pre, table {
 	margin: 1em 4%;
 }
 ul, ol {
@@ -97,11 +100,20 @@ h2, .big p {
 	font-style: italic;
 	font-weight: bold;
 	font-size: 1.8em;
-	margin-top: 0.75em;
-	margin-bottom: 0.75em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 h1 + h2 {
 	margin-top: -1em;
+}
+h2.overlay {
+	position: absolute;
+	z-index: 1337;
+	background: rgba(255, 255, 255, 0.95);
+	bottom: 0.5em;
+	left: 0;
+	right: 0;
+	padding: 0.5em 0;
 }
 pre {
 	overflow: hidden;
@@ -160,7 +172,7 @@ small {
 .left {
 	text-align: left;
 }
-input, button {
+input, output, button, keygen {
 	font-size: inherit;
 }
 
@@ -182,9 +194,17 @@ tr:not(:first-child) th:first-child {
 }
 
 /* Extras */
+mark {
+	display: inline-block;
+}
+mark span {
+	color: #000 !important;
+}
 iframe {
-	width: 100%;
+	width: 92%;
+	height: 92%;
 	border: none;
+	margin: 4%;
 }
 kbd {
 	font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
